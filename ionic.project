@@ -1,0 +1,12 @@
+{
+  "name": "les-mobile-app",
+  "app_id": "5ab91433",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}
