@@ -61,6 +61,24 @@ angular
         views: "tab-account":
           templateUrl: "templates/tab-account.html"
           controller: "AccountCtrl"
+
+
+
+
+
+      # Custom
+
+      .state "tab.upcoming-events",
+        url: "/upcoming-events"
+        views: "tab-upcoming-events":
+          templateUrl: "templates/upcoming-events.html"
+          controller: "UpcomingEventsCtrl"
+
+      .state "tab.event-detail",
+        url: "/events/:id"
+        views: "tab-upcoming-events":
+          templateUrl: "templates/event.html"
+          controller: "EventDetailCtrl"
         
     # if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise "/tab/dash"
