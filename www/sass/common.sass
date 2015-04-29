@@ -165,20 +165,20 @@ html, body
   right: 0
 
 .header__icon_search .header__icon-inner
-  background-image: url("../img/search@3x.png")
+  background-image: url("../../img/search@3x.png")
   background-position: 1px
 
 .header__icon_menu .header__icon-inner
-  background-image: url("../img/menu@3x.png")
+  background-image: url("../../img/menu@3x.png")
 
 .header__icon_back .header__icon-inner
-  background-image: url("../img/back@3x.png")
+  background-image: url("../../img/back@3x.png")
 
 .header__icon_share .header__icon-inner
-  background-image: url("../img/share@3x.png")
+  background-image: url("../../img/share@3x.png")
 
 .header__icon_close .header__icon-inner
-  background-image: url("../img/close@3x.png")
+  background-image: url("../../img/close@3x.png")
 
 .header_red
 
@@ -186,10 +186,10 @@ html, body
   color: $color-font-light
 
   .header__icon_close .header__icon-inner
-    background-image: url("../img/close-light@3x.png")
+    background-image: url("../../img/close-light@3x.png")
 
   .header__icon_send-arrow .header__icon-inner
-    background-image: url("../img/send-arrow-light@3x.png")
+    background-image: url("../../img/send-arrow-light@3x.png")
 
 .header__field
   position: absolute
@@ -202,7 +202,7 @@ html, body
   @include transition(top, 500ms)
 
 .header__field-input
-  background: #f1f1f1 url("../img/search-gray@3x.png") no-repeat 6px 5px
+  background: #f1f1f1 url("../../img/search-gray@3x.png") no-repeat 6px 5px
   background-size: auto 16px
   height: 27px
   width: calc(100% - 20px)
@@ -254,25 +254,25 @@ html, body
 
 .header__search-icon_filter
   left: 10px
-  background-image: url("../img/filter-normal@3x.png")
+  background-image: url("../../img/filter-normal@3x.png")
   &.m-active
-    background-image: url("../img/filter-active@3x.png")
+    background-image: url("../../img/filter-active@3x.png")
 
 .header__search-icon_preview
   right: 54px
   background-size: 17px
-  background-image: url("../img/preview-normal@3x.png")
+  background-image: url("../../img/preview-normal@3x.png")
 
   &.m-active
-    background-image: url("../img/preview-active@3x.png")
+    background-image: url("../../img/preview-active@3x.png")
 
 .header__search-icon_map
   right: 10px
-  background-image: url("../img/map-normal@3x.png")
+  background-image: url("../../img/map-normal@3x.png")
   background-size: auto 90%
 
   &.m-active
-    background-image: url("../img/map-active@3x.png")
+    background-image: url("../../img/map-active@3x.png")
 
   &:before
     content: ""
@@ -501,9 +501,19 @@ html, body
   color: $color-font-red
   cursor: pointer
 
+.event__icons-img-wrapper
+  display: inline-block
+  width: 48px
+  height: 48px
+  padding: 10px
+  box-sizing: border-box
+  border: 1px solid rgba(0,0,0,.2)
+  border-radius: 100%
+  margin-bottom: 6px
+
 .event__icons-img
-  width: 50px
-  height: 50px
+  width: 100%
+  height: 100%
 
 .event__icons-caption
   display: block
@@ -538,7 +548,7 @@ html, body
 
 .event__location-icon
   display: inline-block
-  background: url("../img/location@3x.png") center no-repeat
+  background: url("../../img/location@3x.png") center no-repeat
   background-size: contain
   height: 12px
   width: 12px
@@ -548,39 +558,42 @@ html, body
 .event__rating
   margin-bottom: 11px
 
+
+$path-rating: "../../img/navigation/rating-small-active.svg"
+
 .event__rating-item
   display: inline-block
   width: 14px
   height: 14px
   margin: 0 1px
-  background: url("../img/rating-small-normal@3x.png") center no-repeat
+  background: url("../../img/rating-small-normal@3x.png") center no-repeat // TODO: find icon
   background-size: contain
 
 .event__rating_1
   .event__rating-item:nth-child(1)
-    background-image: url("../img/rating-small-active@3x.png")
+    background-image: url($path-rating)
 
 .event__rating_2
   .event__rating-item:nth-child(1),
   .event__rating-item:nth-child(2)
-    background-image: url("../img/rating-small-active@3x.png")
+    background-image: url($path-rating)
 
 .event__rating_3
   .event__rating-item:nth-child(1),
   .event__rating-item:nth-child(2),
   .event__rating-item:nth-child(3)
-    background-image: url("../img/rating-small-active@3x.png")
+    background-image: url($path-rating)
 
 .event__rating_4
   .event__rating-item:nth-child(1),
   .event__rating-item:nth-child(2),
   .event__rating-item:nth-child(3),
   .event__rating-item:nth-child(4)
-    background-image: url("../img/rating-small-active@3x.png")
+    background-image: url($path-rating)
 
 .event__rating_5
   .event__rating-item
-    background-image: url("../img/rating-small-active@3x.png")
+    background-image: url($path-rating)
 
 .event__host-name
   font-size: 16px
@@ -618,7 +631,7 @@ html, body
 
 .event__bill-icon
   display: inline-block
-  background: url("../img/rad-chips@3x.png") no-repeat center
+  background: url("../../img/rad-chips@3x.png") no-repeat center
   background-size: contain
   width: 14px
   height: 14px
@@ -702,11 +715,11 @@ html, body
   cursor: pointer
 
 .contact__close
-  background-image: url("../img/close@3x.png")
+  background-image: url("../../img/close@3x.png")
   left: 15px
 
 .contact__send
-  background-image: url("../img/send@3x.png")
+  background-image: url("../../img/send@3x.png")
   right: 15px
 
 .contact__name
@@ -787,7 +800,7 @@ html, body
   position: absolute
   top: 0
   right: -42px
-  background: $color-bg-button url("../img/wish-list-active@3x.png") center no-repeat
+  background: $color-bg-button url("../../img/wish-list-active@3x.png") center no-repeat
   background-size: contain
 
 
@@ -945,7 +958,7 @@ html, body
     border-top: none
 
 .filters__types-item_checked
-  background: url("../img/checked-light@3x.png") no-repeat 100% 50%
+  background: url("../../img/checked-light@3x.png") no-repeat 100% 50%
   background-size: 13px auto
 
 .filters__calendar
@@ -979,11 +992,11 @@ html, body
       opacity: .3
 
   .ui-datepicker-prev
-    background-image: url("../img/prev-arrow@3x.png")
+    background-image: url("../../img/prev-arrow@3x.png")
     left: 0
 
   .ui-datepicker-next
-    background-image: url("../img/next-arrow@3x.png")
+    background-image: url("../../img/next-arrow@3x.png")
     right: 0
 
   .ui-datepicker-title
@@ -1076,7 +1089,7 @@ html, body
   width: 17px
   height: 17px
   margin-right: 3px
-  background: url("../img/reset-filter@3x.png") no-repeat center
+  background: url("../../img/reset-filter@3x.png") no-repeat center
   background-size: contain
 
 
@@ -1117,7 +1130,7 @@ html, body
 
 .join-event__dates-item_checked
   color: $color-font-red
-  background: url("../img/checked@3x.png") no-repeat 100% 50%
+  background: url("../../img/checked@3x.png") no-repeat 100% 50%
   background-size: 13px auto
 
 .join-event__message

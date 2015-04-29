@@ -8,6 +8,7 @@ angular
 
   .controller "EventDetailCtrl", ($scope, $stateParams, UpcomingEvents) ->
     $scope.event = UpcomingEvents.get($stateParams.id)
+    window.$scope = $scope
 
 
 

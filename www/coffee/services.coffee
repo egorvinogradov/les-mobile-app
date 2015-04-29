@@ -69,6 +69,106 @@ angular
       }
     ]
 
+    meal_types = [
+      {
+        "bbq": "BBQ"
+        "broccoli": "Broccoli"
+        "burger": "Burger"
+        "chocolate": "Chocolate"
+        "fish": "Fish"
+        "food-chicken": "Chicken"
+        "food-healthy": "Healthy Food"
+        "food-kosher": "Kosher"
+        "food-meat": "Meat"
+        "food-raw": "Raw Food"
+        "leaves": "Leaves"
+        "moustache": "Moustache"
+        "spices": "Spices"
+        "sweet-tooth": "Sweet Tooth"
+        "tomato": "Tomato"
+        "wine": "Wine"
+      }
+    ]
+
+    facilities = [
+      {
+        "bus": "Bus"
+        "child-ball": "Child Ball"
+        "disables": "Disables"
+        "dogs": "Dogs"
+        "elevator": "Elevator"
+        "fan": "Fan"
+        "heating-system": "Heating System"
+        "paid-parking": "Paid Parking"
+        "parking-inside": "Parking Inside"
+        "parking-outdoor": "Parking Outdoor"
+        "pool": "Pool"
+        "smoking-inside": "Smoking Inside"
+        "smoking-outside": "Smoking Outside"
+        "wifi": "WiFi"
+      }
+    ]
+
+    guests = [
+      [
+        {
+          fist_name: "Abby"
+          last_name: "Abbott"
+          photo: "http://i.imgur.com/32Xn5B9.jpg"
+          languages: ["English", "German", "Japanese", "Russian"]
+        }
+        {
+          fist_name: "Clovis"
+          last_name: "Si"
+          photo: "http://i.imgur.com/D9pKGAy.jpg"
+          languages: ["English", "Russian"]
+        }
+        {
+          fist_name: "Dasha"
+          last_name: "Smolina"
+          photo: "http://i.imgur.com/uiAncqd.jpg"
+          languages: ["English", "German", "Japanese", "Russian"]
+        }
+        {
+          fist_name: "Ivan"
+          last_name: "Annikov"
+          photo: "http://i.imgur.com/1jHODNp.jpg"
+          languages: ["English", "Russian"]
+        }
+        {
+          fist_name: "Rebecca"
+          last_name: "Morrison"
+          photo: "http://i.imgur.com/32Xn5B9.jpg"
+          languages: ["English", "German", "Japanese", "Russian"]
+        }
+        {
+          fist_name: "Derek"
+          last_name: "Johnson"
+          photo: "http://i.imgur.com/D9pKGAy.jpg"
+          languages: ["English", "Russian"]
+        }
+      ]
+    ]
+
+    reviews = [
+      [
+        {
+          fist_name: "Abby"
+          last_name: "Abbott"
+          photo: "http://i.imgur.com/32Xn5B9.jpg"
+          review: "The supper club begins with a traditional New Orleans cocktail followed by a sumptuous 4 course feast: Gumbo, New Orleans Cream Tea, Main Course and Dessert so be sure to come hungry."
+          rating: 4
+        }
+        {
+          fist_name: "Derek"
+          last_name: "Johnson"
+          photo: "http://i.imgur.com/D9pKGAy.jpg"
+          review: "Followed by a sumptuous 4 course feast: Gumbo, New Orleans Cream Tea, Main Course and Dessert so be sure to come hungry."
+          rating: 4
+        }
+      ]
+    ]
+
     getSampleValue = (array, index) ->
       array[if index < array.length then index else index % array.length]
 
@@ -86,6 +186,10 @@ angular
           rating: getSampleValue(rating, i)
           description: getSampleValue(description, i)
           details: getSampleValue(details, i)
+          meal_types: getSampleValue(meal_types, i)
+          facilities: getSampleValue(facilities, i)
+          guests: getSampleValue(guests, i)
+          reviews: getSampleValue(reviews, i)
         }
       items
 
