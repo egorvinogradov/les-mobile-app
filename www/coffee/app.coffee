@@ -65,20 +65,41 @@ angular
 
 
 
-
       # Custom
 
-      .state "tab.upcoming-events",
-        url: "/upcoming-events"
-        views: "tab-upcoming-events":
-          templateUrl: "templates/upcoming-events.html"
-          controller: "UpcomingEventsCtrl"
+#      .state "tab.search",
+#        url: "/search"
+#        views: "tab-search":
+#          templateUrl: "templates/search.html"
+#          controller: "SearchCtrl"
+
+      .state "tab.search",
+        url: "/search"
+        views: "tab-search":
+          templateUrl: "templates/search.html"
+          controller: "SearchCtrl"
+
+      .state "tab.events",
+        url: "/events"
+        views: "tab-events":
+          templateUrl: "templates/events.html"
+          controller: "EventsCtrl"
+
+      .state "tab.events-location",
+        url: "/events/location/:id"
+        views: "tab-events":
+          templateUrl: "templates/events.html"
+          controller: "EventsLocationCtrl"
 
       .state "tab.event-detail",
         url: "/events/:id"
-        views: "tab-upcoming-events":
+        views: "tab-events":
           templateUrl: "templates/event.html"
           controller: "EventDetailCtrl"
-        
+
+
+
+          #/tab/search
+
     # if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise "/tab/dash"
+    $urlRouterProvider.otherwise "/tab/events"

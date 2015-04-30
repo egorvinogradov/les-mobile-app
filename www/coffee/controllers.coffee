@@ -1,14 +1,24 @@
 angular
   .module("starter.controllers", [])
 
-  .controller "UpcomingEventsCtrl", ($scope, UpcomingEvents) ->
-    $scope.events = UpcomingEvents.all()
+  .controller "EventsCtrl", ($scope, Events) ->
+    $scope.events = Events.all()
     console.log('events', $scope.events)
     window.$scope = $scope
 
-  .controller "EventDetailCtrl", ($scope, $stateParams, UpcomingEvents) ->
-    $scope.event = UpcomingEvents.get($stateParams.id)
+  .controller "EventsLocationCtrl", ($scope, $stateParams, Events) ->
+    $scope.events = Events.all()
+    console.log('events LOCATION', $stateParams.id, '/', arguments)
     window.$scope = $scope
+
+  .controller "EventDetailCtrl", ($scope, $stateParams, Events) ->
+    $scope.event = Events.get($stateParams.id)
+    window.$scope = $scope
+
+  .controller "SearchCtrl", ($scope, $stateParams, Search) ->
+    $scope.results = Search.get()
+#    $scope.onSearch = ->
+#      console.log('> on search', this, '==', $scope.query)
 
 
 

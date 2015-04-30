@@ -1,0 +1,28 @@
+<ion-view view-title="Search" hide-nav-bar="true">
+
+  <div class="search">
+    <i class="search__bg"></i>
+    <div class="search__container">
+
+      <div class="bar bar-header bar-stable item-input-inset">
+        <label class="item-input-wrapper">
+          <i class="icon ion-ios-search placeholder-icon"></i>
+          <input type="search" placeholder="Search" ng-model="query" ng-keyup="onSearch()">
+        </label>
+        <a class="button button-clear" href="#/tab/events">
+          Cancel
+        </a>
+      </div>
+
+      <ul class="header__field-suggests">
+        <li class="header__field-suggests-item" ng-repeat="result in results | filter: query" ng-if="query">
+          <a class="header__field-suggests-inner" href="#/tab/events/location/{{result.id}}">
+            {{result.city}}, {{result.country}}
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+</ion-view>

@@ -1142,6 +1142,27 @@ $path-rating: "../../img/navigation/rating-small-active.svg"
   font-style: italic
 
 
+// Search
+
+.search
+  position: relative
+  min-height: calc(100vh)
+
+.search__container
+  position: relative
+  z-index: 2
+
+.search__bg
+  position: fixed
+  top: -20px
+  bottom: -20px
+  left: -20px
+  right: -20px
+  z-index: 1
+  background: url("../../img/ui/search-bg.jpg")
+  -webkit-filter: blur(13px) contrast(20%) brightness(80%) sepia(20%)
+
+
 // App states
 
 .app_suggests,

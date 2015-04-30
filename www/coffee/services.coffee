@@ -2,7 +2,91 @@ angular
   .module("starter.services", [])
 
 
-  .factory "UpcomingEvents", ->
+  .factory "Search", ->
+
+    autocomplete = [
+      {
+        city: "Alameda"
+        country: "United States"
+        id: 1001
+      },
+      {
+        city: "Albany"
+        country: "United States"
+        id: 1002
+      },
+      {
+        city: "American"
+        country: "United States"
+        id: 1003
+      },
+      {
+        city: "Antioch"
+        country: "United States"
+        id: 1004
+      },
+      {
+        city: "Atherton"
+        country: "United States"
+        id: 1005
+      },
+      {
+        city: "Belmont"
+        country: "United States"
+        id: 1006
+      },
+      {
+        city: "Belvedere"
+        country: "United States"
+        id: 1007
+      },
+      {
+        city: "Benicia"
+        country: "United States"
+        id: 1008
+      },
+      {
+        city: "Berkeley"
+        country: "United States"
+        id: 1009
+      },
+      {
+        city: "Brentwood"
+        country: "United States"
+        id: 1010
+      },
+      {
+        city: "Brisbane"
+        country: "United States"
+        id: 1011
+      },
+      {
+        city: "Burlingame"
+        country: "United States"
+        id: 1012
+      },
+      {
+        city: "Calistoga"
+        country: "United States"
+        id: 1013
+      },
+      {
+        city: "Campbell"
+        country: "United States"
+        id: 1014
+      },
+      {
+        city: "Clayton"
+        country: "United States"
+        id: 1015
+      }
+    ]
+
+    get: (keyword) ->
+      autocomplete
+
+
+  .factory "Events", ->
 
     # TODO: get data from API
 
@@ -27,9 +111,9 @@ angular
       "21 May"
     ]
     cover = [
-      "http://i.imgur.com/cDJMFO4.jpg"
-      "http://i.imgur.com/p9HykuN.jpg"
-      "http://i.imgur.com/8e83Uca.jpg"
+      "img/samples/1.jpg"
+      "img/samples/2.jpg"
+      "img/samples/3.jpg"
     ]
 
     host = [
