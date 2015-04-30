@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="25px" viewBox="0 0 36 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>pay</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="menu+feed+search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="menu(logged)" sketch:type="MSArtboardGroup" transform="translate(-42.000000, -626.000000)" fill="#979797">
+            <g id="menu" sketch:type="MSLayerGroup" transform="translate(0.000000, 212.000000)">
+                <path d="M43.6843262,427 L43.6843262,417.735808 C43.6843262,416.62173 44.5786892,415.728516 45.6819419,415.728516 L74.4081459,415.728516 C75.5135722,415.728516 76.4057617,416.627211 76.4057617,417.735808 L76.4057617,427 L43.6843262,427 L43.6843262,427 Z M43.6843262,433 L43.6843262,435.4722 C43.6843262,436.580797 44.5765157,437.479492 45.6819419,437.479492 L74.4081459,437.479492 C75.5113987,437.479492 76.4057617,436.586277 76.4057617,435.4722 L76.4057617,433 L43.6843262,433 L43.6843262,433 Z M45.0074199,414 C43.3464677,414 42,415.344109 42,416.990752 L42,436.009248 C42,437.660995 43.3455393,439 45.0074199,439 L74.9925801,439 C76.6535323,439 78,437.655891 78,436.009248 L78,416.990752 C78,415.339005 76.6544607,414 74.9925801,414 L45.0074199,414 Z M43.774292,428.368042 L43.774292,431.665771 L76.4129639,431.665771 L76.4129639,428.368042 L43.774292,428.368042 Z" id="pay" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

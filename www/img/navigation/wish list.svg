@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="34px" height="31px" viewBox="0 0 34 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>wish list</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="menu+feed+search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="menu(logged)" sketch:type="MSArtboardGroup" transform="translate(-42.000000, -443.000000)" stroke="#979797" stroke-width="2">
+            <g id="menu" sketch:type="MSLayerGroup" transform="translate(0.000000, 212.000000)">
+                <path d="M74.9555342,241.529139 C74.3582352,248.300295 68.9025778,256.174576 59.0000504,260.00006 C49.6801342,256.348943 43.641749,248.300405 43.04445,241.529139 C42.4472675,234.757983 47.9968794,231.962315 51.9086983,232.000445 C55.8205172,232.038574 59.0000504,234.8125 59.0000504,234.8125 C59.0000504,234.8125 62.1795835,232.038574 66.0914024,232.000445 C70.0031047,231.962315 75.5528332,234.757983 74.9555342,241.529139 L74.9555342,241.529139 Z" id="wish-list" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

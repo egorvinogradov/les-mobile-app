@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="32px" viewBox="0 0 18 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>next-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="menu+feed+search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="filter-white" sketch:type="MSArtboardGroup" transform="translate(-582.000000, -680.000000)" fill="#9B9B9B">
+            <g id="choose-date" sketch:type="MSLayerGroup" transform="translate(0.000000, 566.000000)">
+                <g id="month" transform="translate(39.000000, 109.000000)" sketch:type="MSShapeGroup">
+                    <path d="M543.286427,20.6336672 C543.332497,20.2933977 543.486816,19.965191 543.748515,19.7034923 L557.976247,5.47575995 C558.612475,4.8395325 559.640755,4.84241467 560.276757,5.47841663 C560.917193,6.11885267 560.913949,7.14439206 560.279414,7.77892677 L547.111955,20.9463857 L560.249669,34.0840995 C560.884204,34.7186342 560.887448,35.7441736 560.247012,36.3846097 C559.61101,37.0206116 558.58273,37.0234938 557.946502,36.3872663 L543.71877,22.159534 C543.304748,21.7455119 543.159486,21.1650266 543.286427,20.6336672 Z" id="next-arrow" transform="translate(551.999092, 20.931513) scale(-1, 1) translate(-551.999092, -20.931513) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

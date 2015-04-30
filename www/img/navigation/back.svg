@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="32px" viewBox="0 0 18 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>back</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="view-event" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g sketch:type="MSArtboardGroup" transform="translate(-20.000000, -65.000000)" id="topBar" fill="#D34B4B">
+            <g sketch:type="MSLayerGroup">
+                <path d="M20.2864265,80.7014964 C20.332497,80.3612269 20.4868162,80.0330202 20.7485149,79.7713215 L34.9762473,65.5435892 C35.6124747,64.9073617 36.6407555,64.9102439 37.2767574,65.5462458 C37.9171935,66.1866819 37.9139488,67.2122213 37.2794141,67.846756 L24.1119552,81.0142149 L37.249669,94.1519287 C37.8842037,94.7864635 37.8874484,95.8120028 37.2470123,96.4524389 C36.6110104,97.0884408 35.5827296,97.091323 34.9465022,96.4550956 L20.7187698,82.2273632 C20.3047477,81.8133411 20.159486,81.2328559 20.2864265,80.7014964 Z" id="back" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

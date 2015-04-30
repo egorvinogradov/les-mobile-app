@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="25px" viewBox="0 0 36 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>messages</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="menu+feed+search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="menu(logged)" sketch:type="MSArtboardGroup" transform="translate(-42.000000, -534.000000)" fill="#979797">
+            <g id="menu" sketch:type="MSLayerGroup" transform="translate(0.000000, 212.000000)">
+                <path d="M55.032,334.5 L43.8936104,323.990499 C43.614327,324.277178 43.44,324.683914 43.44,325.135696 L43.44,343.864304 C43.44,344.317013 43.6115899,344.72506 43.8908739,345.012083 M64.968,334.5 L76.1091261,323.987917 C76.3884102,324.27494 76.56,324.682987 76.56,325.135696 L76.56,343.864304 C76.56,344.316086 76.385673,344.722822 76.1063896,345.009501 M74.4,345.4375 L45.6,345.4375 L56.1093652,335.516536 L60,339.1875 L63.8906348,335.516536 M44.8851766,322 C43.2917376,322 42,323.397678 42,325.115719 L42,343.884281 C42,345.605045 43.2812591,347 44.8851766,347 L75.1148233,347 C76.7082624,347 78,345.602322 78,343.884281 L78,325.115719 C78,323.394955 76.718741,322 75.1148233,322 L44.8851766,322 L44.8851766,322 Z M74.4,323.5625 L45.6,323.5625 L60,337.156269" id="messages" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

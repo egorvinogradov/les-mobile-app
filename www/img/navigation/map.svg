@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="35px" viewBox="0 0 24 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>map</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="menu+feed+search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="filter" sketch:type="MSArtboardGroup" transform="translate(-591.000000, -154.000000)" stroke="#D34B4B" stroke-width="2">
+            <g id="result-bar" sketch:type="MSLayerGroup" transform="translate(0.000000, 130.000000)">
+                <path d="M602.88597,57.58 C602.88597,57.58 592.385714,49.3292571 592.385714,35.5797714 C592.385714,30.0578286 597.087025,25.58 602.88597,25.58 C608.684403,25.58 613.385714,30.0578286 613.385714,35.5797714 C613.385714,49.4547429 602.88597,57.58 602.88597,57.58 L602.88597,57.58 Z M602.88597,31.5798857 C600.566238,31.5798857 598.685586,33.3709714 598.685586,35.5797714 C598.685586,37.7885714 600.566238,39.5804571 602.88597,39.5804571 C605.205317,39.5804571 607.085458,37.7884571 607.085458,35.5797714 C607.085458,33.3709714 605.205189,31.5798857 602.88597,31.5798857 L602.88597,31.5798857 Z" id="map" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

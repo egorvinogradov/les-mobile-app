@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="32px" viewBox="0 0 18 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>prev-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="menu+feed+search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="filter-white" sketch:type="MSArtboardGroup" transform="translate(-39.000000, -680.000000)" fill="#DEDEDE">
+            <g id="choose-date" sketch:type="MSLayerGroup" transform="translate(0.000000, 566.000000)">
+                <g id="month" transform="translate(39.000000, 109.000000)" sketch:type="MSShapeGroup">
+                    <path d="M0.286426509,20.7014964 C0.332497032,20.3612269 0.486816244,20.0330202 0.748514919,19.7713215 L14.9762473,5.54358917 C15.6124747,4.90736172 16.6407555,4.91024389 17.2767574,5.54624585 C17.9171935,6.18668189 17.9139488,7.21222128 17.2794141,7.84675599 L4.11195518,21.0142149 L17.249669,34.1519287 C17.8842037,34.7864635 17.8874484,35.8120028 17.2470123,36.4524389 C16.6110104,37.0884408 15.5827296,37.091323 14.9465022,36.4550956 L0.718769824,22.2273632 C0.304747748,21.8133411 0.15948601,21.2328559 0.286426509,20.7014964 Z" id="prev-arrow"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
