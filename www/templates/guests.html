@@ -1,0 +1,20 @@
+<ion-view view-title="Guests">
+
+  <ion-nav-bar class="bar-stable">
+    <ion-nav-back-button></ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content>
+
+    <div class="guests">
+      <ul class="event__icons-list event__icons-list_expanded">
+        <li class="event__icons-item" ng-repeat="guest in event.guests">
+          <div class="event__icons-photo event__photo" style="background-image: url('{{guest.photo}}')"></div>
+          <span class="event__icons-caption">{{guest.first_name}}</span>
+        </li>
+      </ul>
+    </div>
+
+  </ion-content>
+
+</ion-view>

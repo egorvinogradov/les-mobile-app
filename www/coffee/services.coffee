@@ -118,13 +118,13 @@ angular
 
     host = [
       {
-        fist_name: "Rebecca"
+        first_name: "Rebecca"
         last_name: "Morrison"
         photo: "http://i.imgur.com/uiAncqd.jpg"
         languages: ["English", "German", "Japanese", "Russian"]
       }
       {
-        fist_name: "Derek"
+        first_name: "Derek"
         last_name: "Johnson"
         photo: "http://i.imgur.com/1jHODNp.jpg"
         languages: ["English", "Russian"]
@@ -196,37 +196,37 @@ angular
     guests = [
       [
         {
-          fist_name: "Abby"
+          first_name: "Abby"
           last_name: "Abbott"
           photo: "http://i.imgur.com/32Xn5B9.jpg"
           languages: ["English", "German", "Japanese", "Russian"]
         }
         {
-          fist_name: "Clovis"
+          first_name: "Clovis"
           last_name: "Si"
           photo: "http://i.imgur.com/D9pKGAy.jpg"
           languages: ["English", "Russian"]
         }
         {
-          fist_name: "Dasha"
+          first_name: "Dasha"
           last_name: "Smolina"
           photo: "http://i.imgur.com/uiAncqd.jpg"
           languages: ["English", "German", "Japanese", "Russian"]
         }
         {
-          fist_name: "Ivan"
+          first_name: "Ivan"
           last_name: "Annikov"
           photo: "http://i.imgur.com/1jHODNp.jpg"
           languages: ["English", "Russian"]
         }
         {
-          fist_name: "Rebecca"
+          first_name: "Rebecca"
           last_name: "Morrison"
           photo: "http://i.imgur.com/32Xn5B9.jpg"
           languages: ["English", "German", "Japanese", "Russian"]
         }
         {
-          fist_name: "Derek"
+          first_name: "Derek"
           last_name: "Johnson"
           photo: "http://i.imgur.com/D9pKGAy.jpg"
           languages: ["English", "Russian"]
@@ -237,14 +237,14 @@ angular
     reviews = [
       [
         {
-          fist_name: "Abby"
+          first_name: "Abby"
           last_name: "Abbott"
           photo: "http://i.imgur.com/32Xn5B9.jpg"
           review: "The supper club begins with a traditional New Orleans cocktail followed by a sumptuous 4 course feast: Gumbo, New Orleans Cream Tea, Main Course and Dessert so be sure to come hungry."
           rating: 4
         }
         {
-          fist_name: "Derek"
+          first_name: "Derek"
           last_name: "Johnson"
           photo: "http://i.imgur.com/D9pKGAy.jpg"
           review: "Followed by a sumptuous 4 course feast: Gumbo, New Orleans Cream Tea, Main Course and Dessert so be sure to come hungry."

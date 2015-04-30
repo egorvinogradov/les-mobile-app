@@ -116,7 +116,7 @@
             </span>
             <span class="event__icons-caption">{{meal_type_value}}</span>
           </li>
-          <a class="event__icons-item_more" href="meal-types.html">
+          <a class="event__icons-item_more" href="#/tab/events/{{event.id}}/meals">
             + 6
           </a>
         </ul>
@@ -132,7 +132,7 @@
             </span>
             <span class="event__icons-caption">{{facility_value}}</span>
           </li>
-          <a class="event__icons-item_more" href="facilities.html">
+          <a class="event__icons-item_more" href="#/tab/events/{{event.id}}/facilities">
             + 6
           </a>
         </ul>
@@ -150,7 +150,7 @@
             <div class="event__icons-photo event__photo" style="background-image: url('{{guest.photo}}')"></div>
             <span class="event__icons-caption">{{guest.first_name}}</span>
           </li>
-          <a class="event__icons-item_more" href="guests.html">
+          <a class="event__icons-item_more" href="#/tab/events/{{event.id}}/guests">
             + 3
           </a>
         </ul>
@@ -180,7 +180,7 @@
 
         <div class="event__reviews-actions">
           <button class="event__reviews-add event__button event__button_red">Add review</button>
-          <a class="event__reviews-view event__button" href="reviews.html">View all</a>
+          <a class="event__reviews-view event__button" href="#/tab/events/{{event.id}}/reviews">View all</a>
         </div>
 
       </div>

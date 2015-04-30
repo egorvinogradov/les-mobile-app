@@ -15,6 +15,19 @@ angular
     $scope.event = Events.get($stateParams.id)
     window.$scope = $scope
 
+  .controller "EventDetailMealsCtrl", ($scope, $stateParams, Events) ->
+    $scope.event = Events.get($stateParams.id)
+
+  .controller "EventDetailFacilitiesCtrl", ($scope, $stateParams, Events) ->
+    $scope.event = Events.get($stateParams.id)
+
+  .controller "EventDetailGuestsCtrl", ($scope, $stateParams, Events) ->
+    $scope.event = Events.get($stateParams.id)
+
+  .controller "EventDetailReviewsCtrl", ($scope, $stateParams, Events) ->
+    $scope.event = Events.get($stateParams.id)
+
+
   .controller "SearchCtrl", ($scope, $stateParams, Search) ->
     $scope.results = Search.get()
 #    $scope.onSearch = ->

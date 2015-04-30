@@ -1,0 +1,21 @@
+<ion-view view-title="Meal Type">
+
+  <ion-nav-bar class="bar-stable">
+    <ion-nav-back-button></ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content>
+
+    <div class="facilities">
+      <ul class="event__icons-list event__icons-list_expanded">
+        <li class="event__icons-item" ng-repeat="(meal_type_key, meal_type_value) in event.meal_types">
+          <span class="event__icons-img-wrapper">
+            <img class="event__icons-img" ng-src="img/meal-types/{{meal_type_key}}.svg">
+          </span>
+          <span class="event__icons-caption">{{meal_type_value}}</span>
+        </li>
+      </ul>
+    </div>
+
+  </ion-content>
+</ion-view>

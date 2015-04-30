@@ -97,6 +97,30 @@ angular
           templateUrl: "templates/event.html"
           controller: "EventDetailCtrl"
 
+      .state "tab.event-detail-meals",
+        url: "/events/:id/meals"
+        views: "tab-events":
+          templateUrl: "templates/meals.html"
+          controller: "EventDetailMealsCtrl"
+
+      .state "tab.event-detail-facilities",
+        url: "/events/:id/facilities"
+        views: "tab-events":
+          templateUrl: "templates/facilities.html"
+          controller: "EventDetailFacilitiesCtrl"
+
+      .state "tab.event-detail-guests",
+        url: "/events/:id/guests"
+        views: "tab-events":
+          templateUrl: "templates/guests.html"
+          controller: "EventDetailGuestsCtrl"
+
+      .state "tab.event-detail-reviews",
+        url: "/events/:id/reviews"
+        views: "tab-events":
+          templateUrl: "templates/reviews.html"
+          controller: "EventDetailReviewsCtrl"
+
 
 
           #/tab/search
