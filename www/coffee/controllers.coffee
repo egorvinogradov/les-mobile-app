@@ -12,8 +12,11 @@ angular
     window.$scope = $scope
 
   .controller "EventDetailCtrl", ($scope, $stateParams, Events) ->
-    $scope.event = Events.get($stateParams.id)
     window.$scope = $scope
+
+    $scope.event = Events.get($stateParams.id)
+    $scope.openShareBlock = ->
+      $scope.shareOpen = not $scope.shareOpen;
 
   .controller "EventDetailMealsCtrl", ($scope, $stateParams, Events) ->
     $scope.event = Events.get($stateParams.id)

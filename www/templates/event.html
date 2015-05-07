@@ -3,190 +3,204 @@
   <ion-nav-bar class="bar-stable">
     <ion-nav-back-button></ion-nav-back-button>
     <ion-nav-buttons side="right">
-      <button class="button button-icon icon ion-android-arrow-up"></button>
+      <button class="button button-icon icon ion-ios-upload-outline" ng-click="openShareBlock()"></button>
     </ion-nav-buttons>
   </ion-nav-bar>
 
   <ion-content>
 
-    <div class="event">
+    <div class="event" ng-class="{'m-share': shareOpen}">
+      <div class="event__inner">
 
-      <div class="event__picture" style="background-image: url('{{event.cover}}')"></div>
+        <div class="event__picture" style="background-image: url('{{event.cover}}')"></div>
 
-      <h2 class="event__title event__heading">
-        {{event.title}}
-      </h2>
+        <h2 class="event__title event__heading">
+          {{event.title}}
+        </h2>
 
-      <div class="event__location">
-        <i class="event__location-icon"></i>
-        {{event.address}}
-      </div>
-
-      <div class="event__rating event__rating_{{event.rating}}">
-        <i class="event__rating-item" ng-repeat="i in [1,2,3,4,5]"></i>
-      </div>
-
-      <div class="event__host-photo event__photo" style="background-image: url('{{event.host.photo}}')"></div>
-      <div class="event__host-name">{{event.host.first_name}} {{event.host.last_name}}</div>
-      <div class="event__host-languages">
-        I speak
-        <span ng-repeat="language in event.host.languages">
-          <span ng-if="$last">&</span>
-          {{language}}<span ng-if="!$last && $index !== event.host.languages.length - 2">,</span>
-        </span>
-      </div>
-
-      <div class="event__host-actions">
-        <button class="event__host-contact event__button event__button_red">Contact host</button>
-        <button class="event__host-view event__button">View host</button>
-      </div>
-
-      <div class="event__description">
-        <h3 class="event__description-heading event__heading">Description</h3>
-
-        <div class="event__description-text">
-          {{event.description}}
+        <div class="event__location">
+          <i class="event__location-icon"></i>
+          {{event.address}}
         </div>
-      </div>
 
-      <div class="event__details">
+        <div class="event__rating event__rating_{{event.rating}}">
+          <i class="event__rating-item" ng-repeat="i in [1,2,3,4,5]"></i>
+        </div>
 
-        <h3 class="event__details-heading event__heading">Offering details</h3>
+        <div class="event__host-photo event__photo" style="background-image: url('{{event.host.photo}}')"></div>
+        <div class="event__host-name">{{event.host.first_name}} {{event.host.last_name}}</div>
+        <div class="event__host-languages">
+          I speak
+          <span ng-repeat="language in event.host.languages">
+            <span ng-if="$last">&</span>
+            {{language}}<span ng-if="!$last && $index !== event.host.languages.length - 2">,</span>
+          </span>
+        </div>
 
-        <div class="event__details-numbers event__numbers">
-          <div class="event__details-numbers-item event__numbers-item">
-            <span class="event__details-numbers-caption event__numbers-caption">
-              Min guests
-            </span>
-            {{event.details.min_guests}}
-          </div>
-          <div class="event__details-numbers-item event__numbers-item">
-            <span class="event__details-numbers-caption event__numbers-caption">
-              Max guests
-            </span>
-            {{event.details.max_guests}}
-          </div>
-          <div class="event__details-numbers-item event__numbers-item">
-            <span class="event__details-numbers-caption event__numbers-caption">
-              Event Duration
-            </span>
-            {{event.details.event_duration}} <span class="event__details-numbers-small">h</span>
+        <div class="event__host-actions">
+          <button class="event__host-contact event__button event__button_red">Contact host</button>
+          <button class="event__host-view event__button">View host</button>
+        </div>
+
+        <div class="event__description">
+          <h3 class="event__description-heading event__heading">Description</h3>
+
+          <div class="event__description-text">
+            {{event.description}}
           </div>
         </div>
 
-      </div>
+        <div class="event__details">
 
-      <ul class="event__options">
-        <li class="event__options-item" ng-repeat="(policy_name, policy_value) in event.details.policies">
-          <span class="event__options-name">{{policy_name}}:</span>
-          <span class="event__options-value">{{policy_value}}</span>
-        </li>
-      </ul>
+          <h3 class="event__details-heading event__heading">Offering details</h3>
 
-      <div class="event__bill">
-
-        <h3 class="event__bill-heading event__heading">Shared bill</h3>
-
-        <div class="event__bill-numbers event__numbers">
-          <div class="event__bill-numbers-item event__numbers-item">
-            <span class="event__bill-numbers-caption event__numbers-caption">
-              Sum total
-            </span>
-            750 <span class="event__bill-icon"></span>
-          </div>
-          <div class="event__bill-numbers-item event__numbers-item">
-            <span class="event__bill-numbers-caption event__numbers-caption">
-              Per guest
-            </span>
-            140 <span class="event__bill-icon"></span>
-          </div>
-        </div>
-
-        <button class="event__bill-check event__button">View Check</button>
-
-      </div>
-
-
-      <div class="event__icons event__meal-type">
-        <h3 class="event__icons-heading event__heading">Meal Type</h3>
-        <ul class="event__icons-list">
-          <li class="event__icons-item" ng-repeat="(meal_type_key, meal_type_value) in event.meal_types">
-            <span class="event__icons-img-wrapper">
-              <img class="event__icons-img" ng-src="img/meal-types/{{meal_type_key}}.svg">
-            </span>
-            <span class="event__icons-caption">{{meal_type_value}}</span>
-          </li>
-          <a class="event__icons-item_more" href="#/tab/events/{{event.id}}/meals">
-            + 6
-          </a>
-        </ul>
-      </div>
-
-
-      <div class="event__icons event__facilities">
-        <h3 class="event__icons-heading event__heading">Facilities</h3>
-        <ul class="event__icons-list">
-          <li class="event__icons-item" ng-repeat="(facility_key, facility_value) in event.facilities">
-            <span class="event__icons-img-wrapper">
-              <img class="event__icons-img" ng-src="img/facilities/{{facility_key}}.svg">
-            </span>
-            <span class="event__icons-caption">{{facility_value}}</span>
-          </li>
-          <a class="event__icons-item_more" href="#/tab/events/{{event.id}}/facilities">
-            + 6
-          </a>
-        </ul>
-      </div>
-
-
-      <div class="event__icons event__guests">
-
-        <h3 class="event__icons-heading event__heading">
-          Guests who will attend this event
-        </h3>
-
-        <ul class="event__icons-list">
-          <li class="event__icons-item" ng-repeat="guest in event.guests">
-            <div class="event__icons-photo event__photo" style="background-image: url('{{guest.photo}}')"></div>
-            <span class="event__icons-caption">{{guest.first_name}}</span>
-          </li>
-          <a class="event__icons-item_more" href="#/tab/events/{{event.id}}/guests">
-            + 3
-          </a>
-        </ul>
-
-      </div>
-
-
-      <div class="event__reviews">
-
-        <h3 class="event__reviews-heading event__heading">
-          Reviews
-          <span class="event__reviews-count">2</span>
-        </h3>
-
-        <div class="event__reviews-item" ng-repeat="review in event.reviews">
-
-          <div class="event__reviews-photo event__photo" style="background-image: url('{{review.photo}}')"></div>
-          <div class="event__reviews-wrapper">
-            <div class="event__reviews-name">{{review.first_name}} {{review.last_name}}</div>
-            <div class="event__rating event__rating_{{event.rating}}">
-              <i class="event__rating-item" ng-repeat="i in [1,2,3,4,5]"></i>
+          <div class="event__details-numbers event__numbers">
+            <div class="event__details-numbers-item event__numbers-item">
+              <span class="event__details-numbers-caption event__numbers-caption">
+                Min guests
+              </span>
+              {{event.details.min_guests}}
             </div>
-            <div class="event__reviews-text">{{review.review}}</div>
+            <div class="event__details-numbers-item event__numbers-item">
+              <span class="event__details-numbers-caption event__numbers-caption">
+                Max guests
+              </span>
+              {{event.details.max_guests}}
+            </div>
+            <div class="event__details-numbers-item event__numbers-item">
+              <span class="event__details-numbers-caption event__numbers-caption">
+                Event Duration
+              </span>
+              {{event.details.event_duration}} <span class="event__details-numbers-small">h</span>
+            </div>
           </div>
 
         </div>
 
-        <div class="event__reviews-actions">
-          <button class="event__reviews-add event__button event__button_red">Add review</button>
-          <a class="event__reviews-view event__button" href="#/tab/events/{{event.id}}/reviews">View all</a>
+        <ul class="event__options">
+          <li class="event__options-item" ng-repeat="(policy_name, policy_value) in event.details.policies">
+            <span class="event__options-name">{{policy_name}}:</span>
+            <span class="event__options-value">{{policy_value}}</span>
+          </li>
+        </ul>
+
+        <div class="event__bill">
+
+          <h3 class="event__bill-heading event__heading">Shared bill</h3>
+
+          <div class="event__bill-numbers event__numbers">
+            <div class="event__bill-numbers-item event__numbers-item">
+              <span class="event__bill-numbers-caption event__numbers-caption">
+                Sum total
+              </span>
+              750 <span class="event__bill-icon"></span>
+            </div>
+            <div class="event__bill-numbers-item event__numbers-item">
+              <span class="event__bill-numbers-caption event__numbers-caption">
+                Per guest
+              </span>
+              140 <span class="event__bill-icon"></span>
+            </div>
+          </div>
+
+          <button class="event__bill-check event__button">View Check</button>
+
         </div>
 
+
+        <div class="event__icons event__meal-type">
+          <h3 class="event__icons-heading event__heading">Meal Type</h3>
+          <ul class="event__icons-list">
+            <li class="event__icons-item" ng-repeat="(meal_type_key, meal_type_value) in event.meal_types">
+              <span class="event__icons-img-wrapper">
+                <img class="event__icons-img" ng-src="img/meal-types/{{meal_type_key}}.svg">
+              </span>
+              <span class="event__icons-caption">{{meal_type_value}}</span>
+            </li>
+            <a class="event__icons-item_more" href="#/tab/events/{{event.id}}/meals">
+              + 6
+            </a>
+          </ul>
+        </div>
+
+
+        <div class="event__icons event__facilities">
+          <h3 class="event__icons-heading event__heading">Facilities</h3>
+          <ul class="event__icons-list">
+            <li class="event__icons-item" ng-repeat="(facility_key, facility_value) in event.facilities">
+              <span class="event__icons-img-wrapper">
+                <img class="event__icons-img" ng-src="img/facilities/{{facility_key}}.svg">
+              </span>
+              <span class="event__icons-caption">{{facility_value}}</span>
+            </li>
+            <a class="event__icons-item_more" href="#/tab/events/{{event.id}}/facilities">
+              + 6
+            </a>
+          </ul>
+        </div>
+
+
+        <div class="event__icons event__guests">
+
+          <h3 class="event__icons-heading event__heading">
+            Guests who will attend this event
+          </h3>
+
+          <ul class="event__icons-list">
+            <li class="event__icons-item" ng-repeat="guest in event.guests">
+              <div class="event__icons-photo event__photo" style="background-image: url('{{guest.photo}}')"></div>
+              <span class="event__icons-caption">{{guest.first_name}}</span>
+            </li>
+            <a class="event__icons-item_more" href="#/tab/events/{{event.id}}/guests">
+              + 3
+            </a>
+          </ul>
+
+        </div>
+
+
+        <div class="event__reviews">
+
+          <h3 class="event__reviews-heading event__heading">
+            Reviews
+            <span class="event__reviews-count">2</span>
+          </h3>
+
+          <div class="event__reviews-item" ng-repeat="review in event.reviews">
+            <div class="event__reviews-photo event__photo" style="background-image: url('{{review.photo}}')"></div>
+            <div class="event__reviews-wrapper">
+              <div class="event__reviews-name">{{review.first_name}} {{review.last_name}}</div>
+              <div class="event__rating event__rating_{{event.rating}}">
+                <i class="event__rating-item" ng-repeat="i in [1,2,3,4,5]"></i>
+              </div>
+              <div class="event__reviews-text">{{review.review}}</div>
+            </div>
+          </div>
+
+          <div class="event__reviews-actions">
+            <button class="event__reviews-add event__button event__button_red">Add review</button>
+            <a class="event__reviews-view event__button" href="#/tab/events/{{event.id}}/reviews">View all</a>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Share -->
+
+      <div class="sharing">
+        <h3 class="sharing__title">Share event</h3>
+        <div class="sharing__caption">Tell your friends about event</div>
+        <div class="sharing__button-outer">
+          <button class="sharing__button sharing__button_facebook">Share on Facebook</button>
+        </div>
+        <div class="sharing__button-outer">
+          <button class="sharing__button sharing__button_twitter">Share on Twitter</button>
+        </div>
+        <button class="sharing__cancel">Cancel</button>
       </div>
 
     </div>
-
 
   </ion-content>
 </ion-view>

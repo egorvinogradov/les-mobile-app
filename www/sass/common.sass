@@ -810,11 +810,12 @@ $path-rating: "../../img/navigation/rating-small-active.svg"
   position: fixed
   left: 0
   right: 0
-  bottom: -400px
+  bottom: 0
   z-index: 5
-  background: #ffffff
   box-shadow: 0 -1px 0 rgba(0, 0, 0, .07)
-  @include transition(bottom, 300ms)
+  background: #ffffff
+  @include transform(translate(0,-400px))
+  @include transition(all, 300ms)
 
 .sharing__title
   font-size: 18px
@@ -1165,6 +1166,23 @@ $path-rating: "../../img/navigation/rating-small-active.svg"
 
 // App states
 
+=faded-screen
+  position: fixed
+  margin: -20px 0 0 -20px
+  background: rgba(0, 0, 0, 0.6)
+  pointer-events: none
+  width: calc(100% + 40px)
+  -webkit-filter: blur(13px) contrast(20%) brightness(80%) sepia(20%)
+
+.event.m-share
+  .event__inner
+    +faded-screen
+
+  .sharing
+    @include transform(translate(0,0))
+
+
+
 .app_suggests,
 .app_sharing,
 .app_filters,
@@ -1179,9 +1197,6 @@ $path-rating: "../../img/navigation/rating-small-active.svg"
     width: calc(100% + 20px)
     -webkit-filter: blur(13px) contrast(20%) brightness(80%) sepia(20%)
 
-.app_sharing
-  .sharing
-    bottom: 0
 
 .app_check
   .header
