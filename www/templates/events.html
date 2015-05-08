@@ -1,27 +1,34 @@
-<ion-view view-title="Upcoming Events">
-
-  <ion-nav-bar class="bar-light">
-    <ion-nav-buttons>
-      <button class="button button-icon icon ion-navicon"></button>
-    </ion-nav-buttons>
-    <ion-nav-buttons side="right">
-      <a href="#/tab/search" class="button button-icon icon ion-ios-search"></a>
-    </ion-nav-buttons>
-  </ion-nav-bar>
-
-  <ion-content>
-
-    <a class="events__item" ng-repeat="event in events" href="#/tab/events/{{event.id}}">
-      <div class="events__item-picture" style="background-image: url('{{event.cover}}')"></div>
-      <h3 class="events__item-title">
-        <div class="events__item-time">
-          {{event.time_string}}
-          <span class="events__item-date">{{event.date_string}}</span>
-        </div>
-        {{event.title}}
-        <div class="events__item-city">{{event.address}}</div>
-      </h3>
-    </a>
-
+<ion-view title="Playlist">
+  <ion-content class="has-header">
+    <h1>Playlist</h1>
   </ion-content>
 </ion-view>
+
+
+<!--<ion-view view-title="Upcoming Events">-->
+
+  <!--<ion-nav-bar class="bar-light">-->
+    <!--<ion-nav-buttons>-->
+      <!--<button class="button button-icon icon ion-navicon"></button>-->
+    <!--</ion-nav-buttons>-->
+    <!--<ion-nav-buttons side="right">-->
+      <!--<a href="#/tab/search" class="button button-icon icon ion-ios-search"></a>-->
+    <!--</ion-nav-buttons>-->
+  <!--</ion-nav-bar>-->
+
+  <!--<ion-content>-->
+
+    <!--<a class="events__item" ng-repeat="event in events" href="#/tab/events/{{event.id}}">-->
+      <!--<div class="events__item-picture" style="background-image: url('{{event.cover}}')"></div>-->
+      <!--<h3 class="events__item-title">-->
+        <!--<div class="events__item-time">-->
+          <!--{{event.time_string}}-->
+          <!--<span class="events__item-date">{{event.date_string}}</span>-->
+        <!--</div>-->
+        <!--{{event.title}}-->
+        <!--<div class="events__item-city">{{event.address}}</div>-->
+      <!--</h3>-->
+    <!--</a>-->
+
+  <!--</ion-content>-->
+<!--</ion-view>-->

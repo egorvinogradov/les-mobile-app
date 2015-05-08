@@ -29,6 +29,9 @@ gulp.task('sass', function(done) {
 });
 
 gulp.task('coffee', function(done) {
+
+  console.log('\n\n\n1111\n\n\n')
+
   gulp.src(paths.coffee)
   .pipe(coffee({bare: true}).on('error', gutil.log))
   .pipe(concat('app.js'))

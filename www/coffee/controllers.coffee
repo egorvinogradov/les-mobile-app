@@ -1,54 +1,9 @@
 angular
-  .module("starter.controllers", [])
+  .module("les.controllers", [])
 
-  .controller "EventsCtrl", ($scope, Events) ->
-    $scope.events = Events.all()
-    console.log('events', $scope.events)
-    window.$scope = $scope
+  .controller "AppCtrl", ($scope) ->
+    console.log('App controller')
 
-  .controller "EventsLocationCtrl", ($scope, $stateParams, Events) ->
-    $scope.events = Events.all()
-    console.log('events LOCATION', $stateParams.id, '/', arguments)
-    window.$scope = $scope
-
-  .controller "EventDetailCtrl", ($scope, $stateParams, Events) ->
-    window.$scope = $scope
-
-    $scope.event = Events.get($stateParams.id)
-    $scope.openShareBlock = ->
-      $scope.shareOpen = not $scope.shareOpen;
-
-  .controller "EventDetailMealsCtrl", ($scope, $stateParams, Events) ->
-    $scope.event = Events.get($stateParams.id)
-
-  .controller "EventDetailFacilitiesCtrl", ($scope, $stateParams, Events) ->
-    $scope.event = Events.get($stateParams.id)
-
-  .controller "EventDetailGuestsCtrl", ($scope, $stateParams, Events) ->
-    $scope.event = Events.get($stateParams.id)
-
-  .controller "EventDetailReviewsCtrl", ($scope, $stateParams, Events) ->
-    $scope.event = Events.get($stateParams.id)
-
-
-  .controller "SearchCtrl", ($scope, $stateParams, Search) ->
-    $scope.results = Search.get()
-#    $scope.onSearch = ->
-#      console.log('> on search', this, '==', $scope.query)
-
-
-
-  .controller("DashCtrl", ($scope) ->)
-
-  .controller "ChatsCtrl", ($scope, Chats) ->
-
-    $scope.chats = Chats.all()
-
-    $scope.remove = (chat) ->
-      Chats.remove chat
-
-  .controller "ChatDetailCtrl", ($scope, $stateParams, Chats) ->
-    $scope.chat = Chats.get($stateParams.chatId)
-
-  .controller "AccountCtrl", ($scope) ->
-    $scope.settings = enableFriends: true
+  .controller "EventsCtrl", ($scope) ->
+    console.log('Event controller')
+    $scope.test = 111
