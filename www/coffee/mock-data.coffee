@@ -1,5 +1,5 @@
 current_user =
-  fisrt_name: "John"
+  first_name: "John"
   last_name: "Doe"
   photo: "http://i.imgur.com/uiAncqd.jpg"
   with_us: "1 month"

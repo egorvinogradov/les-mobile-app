@@ -7,51 +7,42 @@
 @mixin linear-gradient-top($top, $bottom)
     background-color: $top
     background-image: -webkit-linear-gradient(top, $top, $bottom)
-    background-image: -moz-linear-gradient(top, $top, $bottom)
     background-image: -ms-linear-gradient(top, $top, $bottom)
     background-image: linear-gradient(to bottom, $top, $bottom)
 
 @mixin linear-gradient-left($left, $right)
     background-color: $left
     background-image: -webkit-linear-gradient(left, $left, $right)
-    background-image: -moz-linear-gradient(left, $left, $right)
     background-image: -ms-linear-gradient(left, $left, $right)
     background-image: linear-gradient(to right, $left, $right)
 
 @mixin linear-gradient-left-extended($values...)
     background-image: -webkit-linear-gradient(left, $values)
-    background-image: -moz-linear-gradient(left, $values)
     background-image: -ms-linear-gradient(left, $values)
     background-image: linear-gradient(to right, $values)
 
 @mixin transition($property, $duration)
     -webkit-transition: $property $duration
-    -moz-transition: $property $duration
     -ms-transition: $property $duration
     transition: $property $duration
 
 @mixin transform($value)
     -webkit-transform: $value
-    -moz-transform: $value
     -ms-transform: $value
     transform: $value
 
 @mixin transform-origin($value)
     -webkit-transform-origin: $value
-    -moz-transform-origin: $value
     -ms-transform-origin: $value
     transform-origin: $value
 
 @mixin user-select($value)
     -webkit-user-select: $value
-    -moz-user-select: $value
     -ms-user-select: $value
     user-select: $value
 
 =keyframes ($name)
     @-webkit-keyframes #{$name}
-        @content
-    @-moz-keyframes #{$name}
         @content
     @-ms-keyframes #{$name}
         @content
@@ -60,7 +51,6 @@
 
 @mixin animation($value)
     -webkit-animation: $value
-    -moz-animation: $value
     -ms-animation: $value
     animation: $value
 

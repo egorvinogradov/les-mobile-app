@@ -1,9 +1,13 @@
 angular
   .module("les.services", [])
+
   .factory "Search", ->
     get: ->
       autocomplete
 
+  .factory "User", ->
+    get: ->
+      current_user
 
   .factory "Events", ->
 

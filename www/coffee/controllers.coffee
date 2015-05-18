@@ -1,8 +1,8 @@
 angular
   .module("les.controllers", [])
 
-  .controller "AppCtrl", () ->
-    null
+  .controller "AppCtrl", ($scope, User) ->
+    $scope.user = User.get()
 
   .controller "EventsCtrl", ($scope, $ionicModal, Events, Search) ->
     $scope.events = Events.all()
@@ -12,7 +12,9 @@ angular
 
     $ionicModal.fromTemplateUrl "templates/search.html", ((modal) ->
       $scope.modal = modal
-    ), scope: $scope
+    ),
+      scope: $scope
+      animation: "fade-in"
 
 
 
@@ -25,10 +27,11 @@ angular
 
     $scope.share = ->
       $ionicActionSheet.show
-        buttons: [
-          { text: "Share on Facebook" }
-          { text: "Share on Twitter" }
-        ]
+        buttons: [{
+          text: "Share on Facebook",
+        }, {
+          text: "Share on Twitter"
+        }]
         titleText: "Share Event"
         cancelText: "Cancel"
         buttonClicked: (index) ->

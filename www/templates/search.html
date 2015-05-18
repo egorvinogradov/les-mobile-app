@@ -16,7 +16,7 @@
 
     <ul class="search__suggests" ng-if="query">
       <li class="search__suggests-item" ng-repeat="result in results | filter: query">
-        <a class="search__suggests-inner" href="#/app/events/location/{{result.id}}">
+        <a class="search__suggests-inner" href="#/app/events/location/{{result.id}}" ng-click="modal.hide()">
           {{result.city}}, {{result.country}}
         </a>
       </li>

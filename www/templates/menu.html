@@ -1,22 +1,59 @@
 <ion-side-menus>
 
   <ion-pane ion-side-menu-content>
-    <ion-nav-bar class="bar-stable">
-      <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i> Back</ion-nav-back-button>
+    <ion-nav-bar class="bar-light">
+      <ion-nav-back-button class="button-clear">
+        <i class="icon ion-ios-arrow-left"></i>
+      </ion-nav-back-button>
     </ion-nav-bar>
     <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
   </ion-pane>
 
   <ion-side-menu side="left">
-    <header class="bar bar-header bar-stable">
-      <h1 class="title">Menu</h1>
-    </header>
-    <ion-content class="has-header">
-      <ion-list>
-        <ion-item nav-clear menu-close href="#/app/events">
-          Events
-        </ion-item>
-      </ion-list>
+
+    <ion-content class="menu">
+
+      <div class="menu__user">
+        <div class="menu__user-photo" style="background-image: url('{{user.photo}}')"></div>
+        <div class="menu__user-name">
+          {{user.first_name}} {{user.last_name}}
+          <i class="menu__user-verification"></i>
+        </div>
+        <div class="menu__user-period">{{user.with_us}}</div>
+      </div>
+
+      <hr class="menu__divider">
+
+      <ul class="menu__list">
+        <li class="menu__list-item" ng-class="{'m-active': true, 'm-new': true}">
+          <a class="menu__list-link" href="#/app/events">
+            <i class="menu__list-icon ion-ios-paper-outline"></i>
+            Feed
+          </a>
+        </li>
+        <li class="menu__list-item" ng-class="{'m-active': false, 'm-new': true}">
+          <a class="menu__list-link" href="#/app/notifications">
+            <i class="menu__list-icon ion-ios-bell-outline"></i>
+            Notifications
+            <span class="menu__list-counter">2</span>
+          </a>
+        </li>
+        <li class="menu__list-item" ng-class="{'m-active': false}">
+          <a class="menu__list-link" href="#/app/logout">
+            <i class="menu__list-icon menu__list-icon_logout ion-ios-upload-outline"></i>
+            Log Out
+          </a>
+        </li>
+        <li class="menu__list-item" ng-class="{'m-active': false}">
+          <a class="menu__list-link" href="#/app/about">
+            <i class="menu__list-icon ion-ios-information-outline"></i>
+            About Us
+          </a>
+        </li>
+      </ul>
+
+
+
     </ion-content>
   </ion-side-menu>
 </ion-side-menus>
