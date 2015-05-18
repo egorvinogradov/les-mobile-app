@@ -1,4 +1,4 @@
-<ion-view view-title="Meal Type">
+<ion-view view-title="Meal types">
 
   <ion-nav-bar class="bar-stable">
     <ion-nav-back-button></ion-nav-back-button>
@@ -7,14 +7,18 @@
   <ion-content>
 
     <div class="facilities">
-      <ul class="event__icons-list event__icons-list_expanded">
-        <li class="event__icons-item" ng-repeat="(meal_type_key, meal_type_value) in event.meal_types">
-          <span class="event__icons-img-wrapper">
-            <img class="event__icons-img" ng-src="img/meal-types/{{meal_type_key}}.svg">
-          </span>
-          <span class="event__icons-caption">{{meal_type_value}}</span>
-        </li>
-      </ul>
+      <table class="event__icons-table" ng-init="chunks = event.meal_types.chunkify(5)">
+        <tr class="event__icons-table-row" ng-repeat="chunk in chunks">
+          <td class="event__icons-table-cell" ng-repeat="item in chunk">
+            <span class="event__icons-item">
+              <span class="event__icons-img-wrapper">
+                <img class="event__icons-img" ng-src="img/meal-types/{{item.key}}.svg">
+              </span>
+              <span class="event__icons-caption">{{item.name}}</span>
+            </span>
+          </td>
+        </tr>
+      </table>
     </div>
 
   </ion-content>

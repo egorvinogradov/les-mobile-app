@@ -2,8 +2,9 @@
 
 
 // Vars
-// TODO: Какой шрифт под андроидом?
+
 $font-default: 300 normal 14px/20px "Helvetica Neue", Helvetica, sans-serif
+$font-les: normal normal 14px/20px les
 
 $color-font-default: #555
 $color-font-light: #fff
@@ -44,6 +45,8 @@ ul, ol, li
 a, .link
   text-decoration: none
   cursor: pointer
+
+
 
 
 // Common
@@ -190,44 +193,6 @@ html, body
 
   .header__icon_send-arrow .header__icon-inner
     background-image: url("../../img/send-arrow-light@3x.png")
-
-.header__field
-  position: absolute
-  height: 50px
-  top: -50px
-  right: 0
-  z-index: 1
-  left: 0
-  background: $color-bg-panel
-  @include transition(top, 500ms)
-
-.header__field-input
-  background: #f1f1f1 url("../../img/search-gray@3x.png") no-repeat 6px 5px
-  background-size: auto 16px
-  height: 27px
-  width: calc(100% - 20px)
-  margin: 0 10px
-  box-sizing: border-box
-  border-radius: 27px
-  border: 1px solid #d5d5d5
-  color: $color-font-grey
-  padding: 0 10px 0 30px
-
-.header__field-suggests
-  position: absolute
-  left: 40px
-  right: 40px
-  color: $color-font-light
-
-.header__field-suggests-inner
-  display: block
-  line-height: 45px
-  overflow: hidden
-  text-overflow: ellipsis
-  white-space: nowrap
-  cursor: pointer
-  border-bottom: 1px solid rgba(255, 255, 255, .2)
-  color: $color-font-light
 
 .header__search
   position: absolute
@@ -383,8 +348,8 @@ html, body
 
 .event__photo
   display: inline-block
-  width: 42px
-  height: 42px
+  width: 50px
+  height: 50px
   background-size: cover
   border: 4px solid #ffffff
   border-radius: 42px
@@ -415,8 +380,8 @@ html, body
 .event__numbers-item
   display: inline-block
   color: $color-font-red
-  font-weight: 100
-  font-size: 30px
+  font-weight: 300
+  font-size: 26px
   line-height: 30px
   text-align: center
   padding-left: 10px
@@ -426,7 +391,7 @@ html, body
     border-left: 1px solid $color-line
 
 .event__numbers-caption
-  font-weight: 300
+  font-weight: 400
   font-size: 12px
   line-height: 12px
   color: $color-font-grey-light
@@ -472,7 +437,10 @@ html, body
   overflow: hidden
   position: relative
   text-align: left
-  padding: 0 45px 0 15px
+  padding: 0 50px 0 15px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
 
 .event__icons-item
   display: inline-block
@@ -482,6 +450,13 @@ html, body
   margin: 0 -2px
   padding-bottom: 10px
   box-sizing: border-box
+  text-align: center
+
+.event__icons-table
+  width: calc(100% - 30px)
+  margin: 15px
+
+.event__icons-table-cell
   text-align: center
 
 .event__icons-item_inactive
@@ -547,53 +522,18 @@ html, body
   padding: 0 20px 8px 20px
 
 .event__location-icon
-  display: inline-block
-  background: url("../../img/location@3x.png") center no-repeat
-  background-size: contain
-  height: 12px
-  width: 12px
-  vertical-align: baseline
-  margin-bottom: -1px
+  margin-right: 2px
 
 .event__rating
   margin-bottom: 11px
 
-
-$path-rating: "../../img/navigation/rating-small-active.svg"
-
 .event__rating-item
-  display: inline-block
-  width: 14px
-  height: 14px
-  margin: 0 1px
-  background: url("../../img/rating-small-normal@3x.png") center no-repeat // TODO: find icon
-  background-size: contain
+  margin: 0 2px
+  font-size: 16px
+  color: $color-font-grey-light
 
-.event__rating_1
-  .event__rating-item:nth-child(1)
-    background-image: url($path-rating)
-
-.event__rating_2
-  .event__rating-item:nth-child(1),
-  .event__rating-item:nth-child(2)
-    background-image: url($path-rating)
-
-.event__rating_3
-  .event__rating-item:nth-child(1),
-  .event__rating-item:nth-child(2),
-  .event__rating-item:nth-child(3)
-    background-image: url($path-rating)
-
-.event__rating_4
-  .event__rating-item:nth-child(1),
-  .event__rating-item:nth-child(2),
-  .event__rating-item:nth-child(3),
-  .event__rating-item:nth-child(4)
-    background-image: url($path-rating)
-
-.event__rating_5
-  .event__rating-item
-    background-image: url($path-rating)
+.event__rating-item_active
+  color: $color-font-red
 
 .event__host-name
   font-size: 16px
@@ -616,12 +556,12 @@ $path-rating: "../../img/navigation/rating-small-active.svg"
 .event__description-text
   color: $color-font-grey-light
   padding: 0 15px
-  text-align: justify
+  text-align: center
 
 .event__details-numbers-small
   margin-left: -7px
-  font-size: 12px
-  font-weight: 300
+  font-size: 13px
+  font-weight: 400
 
 .event__bill
   margin-top: 15px
@@ -630,13 +570,10 @@ $path-rating: "../../img/navigation/rating-small-active.svg"
   border-width: 1px 0
 
 .event__bill-icon
-  display: inline-block
-  background: url("../../img/rad-chips@3x.png") no-repeat center
-  background-size: contain
-  width: 14px
-  height: 14px
+  color: $color-font-red
+  font-size: 15px
   vertical-align: top
-  margin: 5px 0 0 -5px
+  margin-left: -2px
 
 .event__bill-check
   margin-top: 15px
@@ -662,6 +599,7 @@ $path-rating: "../../img/navigation/rating-small-active.svg"
   padding-left: 2px
 
 .event__reviews-text
+  line-height: 18px
   padding: 0 15px 15px 15px
   color: $color-font-grey-light
 
@@ -749,43 +687,7 @@ $path-rating: "../../img/navigation/rating-small-active.svg"
 // Footer
 
 .footer
-  background: $color-bg-panel
-  position: fixed
-  bottom: 0
-  left: 0
-  right: 0
-  z-index: 4
   height: 50px
-  line-height: 50px
-  box-shadow: 0 -1px 0 rgba(0, 0, 0, .07)
-
-.footer__time
-  position: absolute
-  left: -65px
-  width: 64px
-  font-size: 16px
-  line-height: 16px
-  text-align: center
-  color: $color-font-red
-
-.footer__date
-  display: block
-  font-size: 12px
-  padding-top: 1px
-
-.footer__buttons
-  position: relative
-  margin: 9px 57px 0 64px
-  padding-left: 13px
-  height: 32px
-  border-left: 1px solid $color-line
-
-.footer__join,
-.footer__wish
-  background: $color-bg-button
-  border-radius: 32px
-  height: 32px
-  vertical-align: top
 
 .footer__join
   display: inline-block
@@ -794,14 +696,10 @@ $path-rating: "../../img/navigation/rating-small-active.svg"
   font-size: 16px
   line-height: 32px
   color: $color-font-light
-
-.footer__wish
-  width: 32px
-  position: absolute
-  top: 0
-  right: -42px
-  background: $color-bg-button url("../../img/wish-list-active@3x.png") center no-repeat
-  background-size: contain
+  background: $color-bg-button
+  border-radius: 32px
+  height: 32px
+  margin: 4px 10px 0 10px
 
 
 // Sharing
@@ -911,7 +809,7 @@ $path-rating: "../../img/navigation/rating-small-active.svg"
     padding-left: 15px
 
   .event__rating
-    padding: 0px 0 2px 0
+    margin-bottom: 3px
 
   .event__reviews-text
     padding: 0 0 7px 0
@@ -1145,23 +1043,23 @@ $path-rating: "../../img/navigation/rating-small-active.svg"
 
 // Search
 
-.search
-  position: relative
-  min-height: calc(100vh)
+.search__content
+  background: url("../../img/ui/search-bg.jpg") center
+  background-size: cover
 
-.search__container
-  position: relative
-  z-index: 2
+.search__suggests
+  margin: 0 40px
+  color: $color-font-light
 
-.search__bg
-  position: fixed
-  top: -20px
-  bottom: -20px
-  left: -20px
-  right: -20px
-  z-index: 1
-  background: url("../../img/ui/search-bg.jpg")
-  -webkit-filter: blur(13px) contrast(20%) brightness(80%) sepia(20%)
+.search__suggests-inner
+  display: block
+  line-height: 45px
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+  cursor: pointer
+  border-bottom: 1px solid rgba(255, 255, 255, .2)
+  color: $color-font-light
 
 
 // App states

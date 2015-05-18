@@ -29,11 +29,13 @@ gulp.task('sass', function(done) {
 });
 
 gulp.task('coffee', function(done) {
-
-  console.log('\n\n\n1111\n\n\n')
-
   gulp.src(paths.coffee)
-  .pipe(coffee({bare: true}).on('error', gutil.log))
+  .pipe(coffee({bare: true}).on('error', function(error){
+      var stack = error.stack;
+      delete error.code;
+      delete error.stack;
+      console.log('\n> Error:\n\n' + JSON.stringify(error, 0, 4) + '\n\n' + stack);
+    }))
   .pipe(concat('app.js'))
   .pipe(gulp.dest('./www/compiled/js'))
   .on('end', done)

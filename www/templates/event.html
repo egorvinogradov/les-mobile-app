@@ -3,13 +3,13 @@
   <ion-nav-bar class="bar-stable">
     <ion-nav-back-button></ion-nav-back-button>
     <ion-nav-buttons side="right">
-      <button class="button button-icon icon ion-ios-upload-outline" ng-click="openShareBlock()"></button>
+      <button class="button button-icon icon ion-ios-upload-outline" ng-click="share()"></button>
     </ion-nav-buttons>
   </ion-nav-bar>
 
   <ion-content>
 
-    <div class="event" ng-class="{'m-share': shareOpen}">
+    <div class="event">
       <div class="event__inner">
 
         <div class="event__picture" style="background-image: url('{{event.cover}}')"></div>
@@ -19,12 +19,12 @@
         </h2>
 
         <div class="event__location">
-          <i class="event__location-icon"></i>
+          <i class="event__location-icon ion-ios-location"></i>
           {{event.address}}
         </div>
 
-        <div class="event__rating event__rating_{{event.rating}}">
-          <i class="event__rating-item" ng-repeat="i in [1,2,3,4,5]"></i>
+        <div class="event__rating">
+          <i class="event__rating-item event__rating-item_active ion-ios-star" ng-repeat="i in getArray(event.rating)"></i><i class="event__rating-item ion-ios-star" ng-repeat="i in getArray(5-event.rating)"></i>
         </div>
 
         <div class="event__host-photo event__photo" style="background-image: url('{{event.host.photo}}')"></div>
@@ -93,7 +93,7 @@
               <span class="event__bill-numbers-caption event__numbers-caption">
                 Sum total
               </span>
-              750 <span class="event__bill-icon"></span>
+              750 <span class="event__bill-icon les-icon-logo"></span>
             </div>
             <div class="event__bill-numbers-item event__numbers-item">
               <span class="event__bill-numbers-caption event__numbers-caption">
@@ -109,15 +109,15 @@
 
 
         <div class="event__icons event__meal-type">
-          <h3 class="event__icons-heading event__heading">Meal Type</h3>
+          <h3 class="event__icons-heading event__heading">Meal types</h3>
           <ul class="event__icons-list">
-            <li class="event__icons-item" ng-repeat="(meal_type_key, meal_type_value) in event.meal_types">
+            <li class="event__icons-item" ng-repeat="meal_type in event.meal_types">
               <span class="event__icons-img-wrapper">
-                <img class="event__icons-img" ng-src="img/meal-types/{{meal_type_key}}.svg">
+                <img class="event__icons-img" ng-src="img/meal-types/{{meal_type.key}}.svg">
               </span>
-              <span class="event__icons-caption">{{meal_type_value}}</span>
+              <span class="event__icons-caption">{{meal_type.name}}</span>
             </li>
-            <a class="event__icons-item_more" href="#/tab/events/{{event.id}}/meals">
+            <a class="event__icons-item_more" href="#/app/events/{{event.id}}/meals">
               + 6
             </a>
           </ul>
@@ -127,13 +127,13 @@
         <div class="event__icons event__facilities">
           <h3 class="event__icons-heading event__heading">Facilities</h3>
           <ul class="event__icons-list">
-            <li class="event__icons-item" ng-repeat="(facility_key, facility_value) in event.facilities">
+            <li class="event__icons-item" ng-repeat="facility in event.facilities">
               <span class="event__icons-img-wrapper">
-                <img class="event__icons-img" ng-src="img/facilities/{{facility_key}}.svg">
+                <img class="event__icons-img" ng-src="img/facilities/{{facility.key}}.svg">
               </span>
-              <span class="event__icons-caption">{{facility_value}}</span>
+              <span class="event__icons-caption">{{facility.name}}</span>
             </li>
-            <a class="event__icons-item_more" href="#/tab/events/{{event.id}}/facilities">
+            <a class="event__icons-item_more" href="#/app/events/{{event.id}}/facilities">
               + 6
             </a>
           </ul>
@@ -143,7 +143,7 @@
         <div class="event__icons event__guests">
 
           <h3 class="event__icons-heading event__heading">
-            Guests who will attend this event
+            Guests
           </h3>
 
           <ul class="event__icons-list">
@@ -151,7 +151,7 @@
               <div class="event__icons-photo event__photo" style="background-image: url('{{guest.photo}}')"></div>
               <span class="event__icons-caption">{{guest.first_name}}</span>
             </li>
-            <a class="event__icons-item_more" href="#/tab/events/{{event.id}}/guests">
+            <a class="event__icons-item_more" href="#/app/events/{{event.id}}/guests">
               + 3
             </a>
           </ul>
@@ -170,20 +170,21 @@
             <div class="event__reviews-photo event__photo" style="background-image: url('{{review.photo}}')"></div>
             <div class="event__reviews-wrapper">
               <div class="event__reviews-name">{{review.first_name}} {{review.last_name}}</div>
-              <div class="event__rating event__rating_{{event.rating}}">
-                <i class="event__rating-item" ng-repeat="i in [1,2,3,4,5]"></i>
+              <div class="event__rating">
+                <i class="event__rating-item event__rating-item_active ion-ios-star" ng-repeat="i in getArray(review.rating)"></i><i class="event__rating-item ion-ios-star" ng-repeat="i in getArray(5-review.rating)"></i>
               </div>
               <div class="event__reviews-text">{{review.review}}</div>
             </div>
           </div>
 
           <div class="event__reviews-actions">
-            <button class="event__reviews-add event__button event__button_red">Add review</button>
-            <a class="event__reviews-view event__button" href="#/tab/events/{{event.id}}/reviews">View all</a>
+            <a class="event__reviews-view event__button" href="#/app/events/{{event.id}}/reviews">View all</a>
           </div>
 
         </div>
       </div>
+
+
 
 
       <!-- Share -->
@@ -205,6 +206,10 @@
     </div>
 
   </ion-content>
+
+
+  <ion-footer-bar align-title="left" class="footer bar-light">
+    <button class="footer__join">Join Event</button>
+  </ion-footer-bar>
+
 </ion-view>
-
-

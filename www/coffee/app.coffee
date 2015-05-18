@@ -2,20 +2,9 @@ angular
   .module("les", [
     "ionic"
     "les.controllers"
+    "les.services"
   ])
-  .run ($ionicPlatform) ->
-    $ionicPlatform.ready ->
-
-      if window.StatusBar
-        StatusBar.styleDefault()
-
-      console.log('Ready')
-
-
-
   .config ($stateProvider, $urlRouterProvider) ->
-
-    console.log('> config');
 
     $stateProvider
       .state "app",
@@ -23,12 +12,67 @@ angular
         abstract: true
         templateUrl: "templates/menu.html"
         controller: "AppCtrl"
+        
+      .state "app.search",
+        url: "/search"
+        views:
+          menuContent:
+            templateUrl: "templates/search.html"
+            controller: "SearchCtrl"
+
+
+      # Event lists
 
       .state "app.events",
         url: "/events"
         views:
           menuContent:
             templateUrl: "templates/events.html"
-#            controller: "EventsCtrl"
+            controller: "EventsCtrl"
 
-    $urlRouterProvider.otherwise "/app"
+      .state "app.events-location",
+        url: "/events/location/:id"
+        views:
+          menuContent:
+            templateUrl: "templates/events.html"
+            controller: "EventsLocationCtrl"
+
+
+      # Event details
+
+      .state "app.event-detail",
+        url: "/events/:id"
+        views:
+          menuContent:
+            templateUrl: "templates/event.html"
+            controller: "EventDetailCtrl"
+
+      .state "app.event-detail-meals",
+        url: "/events/:id/meals"
+        views:
+          menuContent:
+            templateUrl: "templates/meals.html"
+            controller: "EventDetailMealsCtrl"
+
+      .state "app.event-detail-facilities",
+        url: "/events/:id/facilities"
+        views:
+          menuContent:
+            templateUrl: "templates/facilities.html"
+            controller: "EventDetailFacilitiesCtrl"
+
+      .state "app.event-detail-guests",
+        url: "/events/:id/guests"
+        views:
+          menuContent:
+            templateUrl: "templates/guests.html"
+            controller: "EventDetailGuestsCtrl"
+
+      .state "app.event-detail-reviews",
+        url: "/events/:id/reviews"
+        views:
+          menuContent:
+            templateUrl: "templates/reviews.html"
+            controller: "EventDetailReviewsCtrl"
+
+    $urlRouterProvider.otherwise "/app/events"

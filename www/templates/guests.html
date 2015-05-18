@@ -6,13 +6,17 @@
 
   <ion-content>
 
-    <div class="guests">
-      <ul class="event__icons-list event__icons-list_expanded">
-        <li class="event__icons-item" ng-repeat="guest in event.guests">
-          <div class="event__icons-photo event__photo" style="background-image: url('{{guest.photo}}')"></div>
-          <span class="event__icons-caption">{{guest.first_name}}</span>
-        </li>
-      </ul>
+    <div class="facilities">
+      <table class="event__icons-table" ng-init="chunks = event.guests.chunkify(5)">
+        <tr class="event__icons-table-row" ng-repeat="chunk in chunks">
+          <td class="event__icons-table-cell" ng-repeat="item in chunk">
+            <span class="event__icons-item">
+              <div class="event__icons-photo event__photo" style="background-image: url('{{item.photo}}')"></div>
+              <span class="event__icons-caption">{{item.first_name}}</span>
+            </span>
+          </td>
+        </tr>
+      </table>
     </div>
 
   </ion-content>

@@ -6,15 +6,19 @@
 
   <ion-content>
 
-    <div class="meal-type">
-      <ul class="event__icons-list event__icons-list_expanded">
-        <li class="event__icons-item" ng-repeat="(facility_key, facility_value) in event.facilities">
-          <span class="event__icons-img-wrapper">
-            <img class="event__icons-img" ng-src="img/facilities/{{facility_key}}.svg">
-          </span>
-          <span class="event__icons-caption">{{facility_value}}</span>
-        </li>
-      </ul>
+    <div class="facilities">
+      <table class="event__icons-table" ng-init="chunks = event.facilities.chunkify(5)">
+        <tr class="event__icons-table-row" ng-repeat="chunk in chunks">
+          <td class="event__icons-table-cell" ng-repeat="item in chunk">
+            <span class="event__icons-item">
+              <span class="event__icons-img-wrapper">
+                <img class="event__icons-img" ng-src="img/facilities/{{item.key}}.svg">
+              </span>
+              <span class="event__icons-caption">{{item.name}}</span>
+            </span>
+          </td>
+        </tr>
+      </table>
     </div>
 
   </ion-content>

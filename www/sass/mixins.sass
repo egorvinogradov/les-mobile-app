@@ -1,9 +1,6 @@
 @mixin font-face ($name, $filename, $font-weight)
     font-family: $name
-    src: font-url(asset_path($filename + ".eot"))
-    src: font-url(asset_path($filename + ".eot?#iefix")) format("embedded-opentype")
-    src: font-url(asset_path($filename + ".woff")) format("woff")
-    src: font-url(asset_path($filename + ".ttf")) format("truetype")
+    src: url($filename + ".ttf") format("truetype")
     font-weight: $font-weight
     font-style: normal
 

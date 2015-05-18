@@ -6,8 +6,23 @@
 
   <ion-content>
 
-    12222
+    <div class="reviews">
 
+      <div class="event__reviews-item" ng-repeat="review in event.reviews">
+        <div class="event__reviews-photo event__photo" style="background-image: url('{{review.photo}}')"></div>
+        <div class="event__reviews-wrapper">
+          <div class="event__reviews-name">{{review.first_name}} {{review.last_name}}</div>
+          <div class="event__rating">
+            <i class="event__rating-item event__rating-item_active ion-ios-star" ng-repeat="i in getArray(review.rating)"></i><i class="event__rating-item ion-ios-star" ng-repeat="i in getArray(5-review.rating)"></i>
+          </div>
+          <div class="event__reviews-text">{{review.review}}</div>
+        </div>
+      </div>
+
+
+
+
+    </div>
 
   </ion-content>
 
