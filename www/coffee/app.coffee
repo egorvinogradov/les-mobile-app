@@ -20,6 +20,20 @@ angular
             templateUrl: "templates/search.html"
             controller: "SearchCtrl"
 
+      .state "app.notifications",
+        url: "/notifications"
+        views:
+          menuContent:
+            templateUrl: "templates/notifications.html"
+            controller: "NotificationsCtrl"
+
+      .state "app.about",
+        url: "/about"
+        views:
+          menuContent:
+            templateUrl: "templates/about.html"
+            controller: "AboutCtrl"
+
 
       # Event lists
 

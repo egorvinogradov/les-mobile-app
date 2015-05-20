@@ -1130,8 +1130,11 @@ html, body
 // Menu
 
 .menu
-  padding: 43px 22px 22px 22px
+  padding: 22px
   font-weight: 300
+
+  .platform-ios:not(.platform-browser) &
+    padding-top: 42px
 
 .menu__user
   position: relative
@@ -1200,7 +1203,7 @@ html, body
   .m-active &
     color: $color-font-red
   
-  .m-new &:after
+  .m-updates &:after
     content: ""
     display: block
     width: 8px
@@ -1212,14 +1215,92 @@ html, body
     right: -2px
     box-shadow: 0 0 0 1px rgba(255,255,255,1)
 
+  &.ion-ios-upload-outline
+    @include transform(rotate(90deg))
+
 .menu__list-counter
   position: absolute
   right: 0
   font-size: 14px
   color: $color-font-grey-light
 
-.menu__list-icon_logout
-  @include transform(rotate(90deg))
+
+
+// Menu mini events
+
+.menu__mini-events__title
+  font-size: 19px
+  text-align: center
+  color: $color-font-grey
+  margin-bottom: 14px
+
+  .menu__mini-events__get &
+    color: #F09839
+    margin: 0
+
+  .menu__mini-events__give &
+    color: #A6CC41
+    margin: 0
+
+.menu__mini-events__comment
+  text-align: center
+  font-size: 12px
+  line-height: 15px
+  margin: 6px 0
+  color: $color-font-grey-light
+
+.menu__mini-events__button
+  height: 33px
+  line-height: 33px
+  border-radius: 33px
+  width: 100%
+  text-align: center
+  color: #ffffff
+  font-size: 16px
+
+.menu__mini-events__button_get
+  background: #F09839
+
+.menu__mini-events__button_give
+  background: #A6CC41
+
+.menu__mini-events__divider
+  @extend .menu__divider
+  margin: 0 0 8px 0
+
+.menu__mini-events__countdown
+  color: $color-font-grey
+  font-size: 26px
+  letter-spacing: 1px
+  text-align: center
+  margin: 18px 0 14px 0
+
+.menu__mini-events__countdown-caption-item
+  color: $color-font-grey-light
+  font-size: 12px
+  letter-spacing: 0
+  margin: 0 6px
+  display: inline-block
+  vertical-align: top
+  padding-top: 2px
+
+
+// About
+
+.about
+  padding: 20px
+  color: $color-font-grey-light
+
+  p
+    margin-bottom: 12px
+
+  h4
+    color: $color-font-grey
+    font-weight: normal
+    font-size: 16px
+    line-height: 20px
+    padding: 0
+    margin: 0 0 12px 0
 
 
 // App states

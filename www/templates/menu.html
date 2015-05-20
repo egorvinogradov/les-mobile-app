@@ -1,9 +1,7 @@
 <ion-side-menus>
 
   <ion-pane ion-side-menu-content>
-    <ion-nav-bar class="bar-light">
-      <ion-nav-back-button class="button-clear"></ion-nav-back-button>
-    </ion-nav-bar>
+    <ion-nav-bar class="bar-light"></ion-nav-bar>
     <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
   </ion-pane>
 
@@ -23,33 +21,76 @@
       <hr class="menu__divider">
 
       <ul class="menu__list">
-        <li class="menu__list-item" ng-class="{'m-active': true, 'm-new': true}">
-          <a class="menu__list-link" href="#/app/events">
-            <i class="menu__list-icon ion-ios-paper-outline"></i>
-            Feed
-          </a>
-        </li>
-        <li class="menu__list-item" ng-class="{'m-active': false, 'm-new': true}">
-          <a class="menu__list-link" href="#/app/notifications">
-            <i class="menu__list-icon ion-ios-bell-outline"></i>
-            Notifications
-            <span class="menu__list-counter">2</span>
-          </a>
-        </li>
-        <li class="menu__list-item" ng-class="{'m-active': false}">
-          <a class="menu__list-link" href="#/app/logout">
-            <i class="menu__list-icon menu__list-icon_logout ion-ios-upload-outline"></i>
-            Log Out
-          </a>
-        </li>
-        <li class="menu__list-item" ng-class="{'m-active': false}">
-          <a class="menu__list-link" href="#/app/about">
-            <i class="menu__list-icon ion-ios-information-outline"></i>
-            About Us
+        <li class="menu__list-item"
+          ng-repeat="item in menu"
+          ng-class="{'m-active': item.active, 'm-updates': item.updates}">
+          <a class="menu__list-link" href="{{item.url}}" ng-click="onMenuClick()">
+            <i class="menu__list-icon {{item.icon}}"></i>
+            {{item.title}}
+            <span class="menu__list-counter" ng-if="item.counter">{{item.counter}}</span>
           </a>
         </li>
       </ul>
 
+      <hr class="menu__divider">
+
+      <div class="menu__mini-events" ng-init="user.getFood = false; user.giveFood = false;">
+
+        <div class="menu__mini-events__choose" ng-if="!user.getFood && !user.giveFood">
+          <div class="menu__mini-events__title">Time to choose</div>
+          <button class="menu__mini-events__button menu__mini-events__button_get" ng-click="user.getFood = true; resetEventCounter()">
+            Get Food
+          </button>
+          <div class="menu__mini-events__comment">
+            If you're hungry and want to get food soon and nearby
+          </div>
+          <hr class="menu__mini-events__divider">
+          <button class="menu__mini-events__button menu__mini-events__button_give" ng-click="user.giveFood = true; resetEventCounter()">
+            Give Food
+          </button>
+          <div class="menu__mini-events__comment">
+            If you're going to have some food soon and want to share it with people
+          </div>
+        </div>
+
+        <div class="menu__mini-events__get" ng-if="user.getFood">
+          <div class="menu__mini-events__title">Get Food</div>
+          <div class="menu__mini-events__comment">
+            If you're hungry and want to get food soon and nearby
+          </div>
+          <div class="menu__mini-events__countdown">
+            {{eventCounter | date:'mm:ss'}}
+            <div>
+              <span class="menu__mini-events__countdown-caption-item">min</span>
+              <span class="menu__mini-events__countdown-caption-item">sec</span>
+            </div>
+          </div>
+          <hr class="menu__mini-events__divider">
+          <button class="menu__mini-events__button menu__mini-events__button_get" ng-click="user.getFood = false;">
+            Reset
+          </button>
+        </div>
+
+        <div class="menu__mini-events__give" ng-if="user.giveFood">
+          <div class="menu__mini-events__title">Give Food</div>
+          <div class="menu__mini-events__comment">
+            If you're going to have some food soon and want to share it with people
+          </div>
+          <div class="menu__mini-events__countdown">
+            {{eventCounter | date:'mm:ss'}}
+            <div>
+              <span class="menu__mini-events__countdown-caption-item">min</span>
+              <span class="menu__mini-events__countdown-caption-item">sec</span>
+            </div>
+          </div>
+          <hr class="menu__mini-events__divider">
+          <button class="menu__mini-events__button menu__mini-events__button_give" ng-click="user.giveFood = false">
+            Reset
+          </button>
+        </div>
+
+
+      </div>
 
 
     </ion-content>

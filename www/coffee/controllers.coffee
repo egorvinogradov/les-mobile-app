@@ -1,8 +1,50 @@
 angular
   .module("les.controllers", [])
 
-  .controller "AppCtrl", ($scope, User) ->
+  .controller "AppCtrl", ($scope, $interval, $ionicSideMenuDelegate, User) ->
+
     $scope.user = User.get()
+
+    $scope.resetEventCounter = ->
+      $scope.eventCounter = +new Date(0) - 1000
+      
+    $scope.resetEventCounter()
+    
+    $interval ->
+      $scope.eventCounter -= 1000
+    , 1000, 60 * 60
+
+    $scope.menu = [
+      {
+        title: "Feed"
+        url: "#/app/events"
+        icon: "ion-ios-paper-outline"
+        active: true
+      }
+      {
+        title: "Notifications"
+        url: "#/app/notifications"
+        icon: "ion-ios-bell-outline"
+        counter: 2
+      }
+      {
+        title: "Log Out"
+        url: "#"
+        icon: "ion-ios-upload-outline"
+      }
+      {
+        title: "About Us"
+        url: "#/app/about"
+        icon: "ion-ios-information-outline"
+      }
+    ]
+
+    $scope.onMenuClick = ->
+      for item in $scope.menu
+        item.active = false
+      @item.active = true
+      $ionicSideMenuDelegate.toggleLeft()
+
 
   .controller "EventsCtrl", ($scope, $ionicModal, Events, Search) ->
     $scope.events = Events.all()
@@ -66,4 +108,10 @@ angular
 
   .controller "SearchCtrl", ($scope, $stateParams, Search) ->
     $scope.results = Search.get()
+
+  .controller "NotificationsCtrl", ($scope, Notifications) ->
+    $scope.notifications = Notifications.get()
+
+  .controller "AboutCtrl", ->
+    1
 

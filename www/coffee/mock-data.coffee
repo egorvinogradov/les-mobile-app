@@ -5,7 +5,7 @@ current_user =
   with_us: "1 month"
 
 title = [
-  "Pasta Madness at Casa Maestoso!"
+  "Pasta Madness"
   "Thanksgiving turkey"
   "BBQ Party"
 ]
@@ -327,3 +327,7 @@ autocomplete = [{
     id: 1015
   }
 ]
+
+notifications_arr = [{
+
+}]

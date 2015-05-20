@@ -6,3 +6,6 @@ Array::chunkify = (number) ->
     chunks.push @slice(i, i + number)
     i += number
   chunks
+
+Array::last = ->
+  @[@.length - 1]

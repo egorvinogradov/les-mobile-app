@@ -5,6 +5,10 @@ angular
     get: ->
       autocomplete
 
+  .factory "Notifications", ->
+    get: ->
+      notifications_arr
+
   .factory "User", ->
     get: ->
       current_user
