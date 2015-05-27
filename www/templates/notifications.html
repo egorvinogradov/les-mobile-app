@@ -4,9 +4,35 @@
     <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
   </ion-nav-buttons>
 
-  <ion-content>
+  <ion-content class="notifications">
 
+    <div class="notifications__section"
+      ng-repeat="section in notificationSections"
+      ng-if="section.items.length">
 
+      <h1 class="notifications__title">{{section.title}}</h1>
+      <ul class="notifications__list">
+
+        <li class="notifications__list-item"
+          ng-repeat="item in section.items"
+          ng-class="{'m-unread': item.unread}">
+
+          <a class="notifications__list-link" href="#/app/notifications/{{item.id}}">
+            <div class="notifications__photo" style="background-image: url('{{item.photo}}')"></div>
+            <div class="notifications__message">
+              <h3 class="notifications__name">
+                {{item.first_name}} {{item.last_name}}
+              </h3>
+              <div class="notifications__text">
+                {{item.text}} {{item.time_ago}} ago
+              </div>
+            </div>
+          </a>
+
+        </li>
+
+      </ul>
+    </div>
 
   </ion-content>
 </ion-view>

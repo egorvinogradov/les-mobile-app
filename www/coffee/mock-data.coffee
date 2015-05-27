@@ -329,5 +329,95 @@ autocomplete = [{
 ]
 
 notifications_arr = [{
-
+    id: 6
+    unread: true
+    text: "Is hungry"
+    time_ago: "1 minute"
+    section: "today"
+    first_name: "Abby"
+    last_name: "Abbott"
+    photo: "http://i.imgur.com/32Xn5B9.jpg"
+  }
+  {
+    id: 5
+    unread: true
+    text: "Sent request to the event Lorem ipsum dolor sit amet, consectetuer adipiscing"
+    time_ago: "32 minutes"
+    section: "today"
+    first_name: "Clovis"
+    last_name: "Si"
+    photo: "http://i.imgur.com/D9pKGAy.jpg"
+  }
+  {
+    id: 4
+    unread: true
+    text: "Following you"
+    time_ago: "6 hours"
+    section: "today"
+    first_name: "Dasha"
+    last_name: "Smolina"
+    photo: "http://i.imgur.com/uiAncqd.jpg"
+  }
+  {
+    id: 3
+    text: "Is hungry"
+    time_ago: "16 days"
+    section: "yesterday"
+    first_name: "Ivan"
+    last_name: "Annikov"
+    photo: "http://i.imgur.com/1jHODNp.jpg"
+  }
+  {
+    id: 2
+    text: "Is hungry"
+    time_ago: "5 days"
+    section: "earlier"
+    first_name: "Rebecca"
+    last_name: "Morrison"
+    photo: "http://i.imgur.com/32Xn5B9.jpg"
+  }
+  {
+    id: 1
+    text: "Offers food"
+    time_ago: "8 days"
+    section: "earlier"
+    first_name: "Derek"
+    last_name: "Johnson"
+    photo: "http://i.imgur.com/D9pKGAy.jpg"
+  }
+  {
+    id: 2
+    text: "Is hungry"
+    time_ago: "5 days"
+    section: "earlier"
+    first_name: "Rebecca"
+    last_name: "Morrison"
+    photo: "http://i.imgur.com/32Xn5B9.jpg"
+  }
+  {
+    id: 1
+    text: "Offers food"
+    time_ago: "8 days"
+    section: "earlier"
+    first_name: "Derek"
+    last_name: "Johnson"
+    photo: "http://i.imgur.com/D9pKGAy.jpg"
+  }
+  {
+    id: 2
+    text: "Is hungry"
+    time_ago: "5 days"
+    section: "earlier"
+    first_name: "Rebecca"
+    last_name: "Morrison"
+    photo: "http://i.imgur.com/32Xn5B9.jpg"
+  }
+  {
+    id: 1
+    text: "Offers food"
+    time_ago: "8 days"
+    section: "earlier"
+    first_name: "Derek"
+    last_name: "Johnson"
+    photo: "http://i.imgur.com/D9pKGAy.jpg"
 }]

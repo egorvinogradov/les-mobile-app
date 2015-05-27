@@ -1,9 +1,11 @@
 angular
   .module("les.controllers", [])
 
-  .controller "AppCtrl", ($scope, $interval, $ionicSideMenuDelegate, User) ->
+  .controller "AppCtrl", ($scope, $interval, $ionicSideMenuDelegate, User, Notifications) ->
 
     $scope.user = User.get()
+    $scope.notifications = Notifications.get()
+    $scope.unread = (item for item in $scope.notifications when item.unread)
 
     $scope.resetEventCounter = ->
       $scope.eventCounter = +new Date(0) - 1000
@@ -25,7 +27,7 @@ angular
         title: "Notifications"
         url: "#/app/notifications"
         icon: "ion-ios-bell-outline"
-        counter: 2
+        counter: $scope.unread.length
       }
       {
         title: "Log Out"
@@ -45,18 +47,17 @@ angular
       @item.active = true
       $ionicSideMenuDelegate.toggleLeft()
 
-
   .controller "EventsCtrl", ($scope, $ionicModal, Events, Search) ->
     $scope.events = Events.all()
     $scope.results = Search.get()
 
-    window.$scope = $scope
+    modalOptions =
+      scope: $scope
+      animation: "fade-in"
 
     $ionicModal.fromTemplateUrl "templates/search.html", ((modal) ->
       $scope.modal = modal
-    ),
-      scope: $scope
-      animation: "fade-in"
+    ), modalOptions
 
 
 
@@ -109,9 +110,24 @@ angular
   .controller "SearchCtrl", ($scope, $stateParams, Search) ->
     $scope.results = Search.get()
 
-  .controller "NotificationsCtrl", ($scope, Notifications) ->
+  .controller "NotificationsCtrl", ($scope, $filter, Notifications) ->
+
     $scope.notifications = Notifications.get()
 
+    $scope.notificationSections = [{
+      title: "Today",
+      items: $filter('filter')($scope.notifications, {section: 'today'})
+    }, {
+      title: "Yesterday",
+      items: $filter('filter')($scope.notifications, {section: 'yesterday'})
+    }, {
+      title: "Earlier",
+      items: $filter('filter')($scope.notifications, {section: 'earlier'})
+    }]
+
+    console.log('6666')
+
+
   .controller "AboutCtrl", ->
-    1
+
 

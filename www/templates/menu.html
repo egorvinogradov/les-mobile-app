@@ -23,7 +23,7 @@
       <ul class="menu__list">
         <li class="menu__list-item"
           ng-repeat="item in menu"
-          ng-class="{'m-active': item.active, 'm-updates': item.updates}">
+          ng-class="{'m-active': item.active, 'm-updates': item.counter}">
           <a class="menu__list-link" href="{{item.url}}" ng-click="onMenuClick()">
             <i class="menu__list-icon {{item.icon}}"></i>
             {{item.title}}

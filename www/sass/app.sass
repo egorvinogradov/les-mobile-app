@@ -129,29 +129,14 @@ a, .link
 .m-nw
   white-space: nowrap
 
-.app
-  font: $font-default
-  color: $color-font-default
-  padding-top: 50px
-  overflow-x: hidden
-
-// TODO: УДАЛИТЬ
-html, body
-  height: 100%
-
-.app
-  min-height: 100%
-  box-sizing: border-box
-
-//@media screen and (min-width: 700px)
-//
-//    body
-//        width: 320px
-//        background: grey
-//    .app
-//        background: #ffffff
-//        min-height: 100%
-// TODO: УДАЛИТЬ
+=round-photo($radius)
+  display: inline-block
+  width: $radius
+  height: $radius
+  border-radius: $radius
+  border: 4px solid #ffffff
+  background-size: cover
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .18)
 
 
 // Header
@@ -332,7 +317,6 @@ html, body
   background-size: cover
   background-position: center
   -webkit-filter: blur(2px) contrast(60%) brightness(80%) sepia(76%)
-// TODO: какие браузеры и версии в phone gap?
 
 .events__header-city,
 .events__header-title,
@@ -412,13 +396,7 @@ html, body
   padding: 17px 20px
 
 .event__photo
-  display: inline-block
-  width: 50px
-  height: 50px
-  background-size: cover
-  border: 4px solid #ffffff
-  border-radius: 42px
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, .18)
+  +round-photo(50px)
   margin-bottom: 3px
 
 .event__button
@@ -1139,16 +1117,11 @@ html, body
   min-height: 50px
 
 .menu__user-photo
+  margin-bottom: 3px
   position: absolute
   top: 0
   left: 0
-  width: 50px
-  height: 50px
-  background-size: cover
-  border: 4px solid white
-  border-radius: 42px
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18)
-  margin-bottom: 3px
+  +round-photo(50px)
 
 .menu__user-name
   font-size: 16px
@@ -1209,7 +1182,7 @@ html, body
     border-radius: 100%
     position: absolute
     top: 12px
-    right: -2px
+    right: 0
     box-shadow: 0 0 0 1px rgba(255,255,255,1)
 
   &.ion-ios-upload-outline
@@ -1298,6 +1271,65 @@ html, body
     line-height: 20px
     padding: 0
     margin: 0 0 12px 0
+
+
+// Notifications
+
+.notifications__title
+  text-transform: uppercase
+  font-weight: normal
+  color: $color-font-grey-light
+  font-size: 12px
+  line-height: 44px
+  border: 1px solid $color-line
+  border-width: 1px 0
+  margin: 0 20px 10px 20px
+
+  .notifications__section:first-child &
+    border-top: 0
+
+.notifications__list
+  margin-bottom: 10px
+
+.notifications__list-item
+  &.m-unread
+    .notifications__photo:after
+      content: ""
+      display: block
+      width: 6px
+      height: 6px
+      border-radius: 6px
+      position: absolute
+      top: -1px
+      right: -1px
+      background: $color-font-red
+      box-shadow: 0 0 0 1px rgba(255,255,255,.8)
+
+.notifications__list-link
+  display: block
+  padding: 5px 20px
+
+.notifications__photo
+  +round-photo(30px)
+  float: left
+  margin-right: 15px
+  border-width: 2px
+  position: relative
+
+.notifications__message
+  overflow: hidden
+
+.notifications__name
+  font-weight: normal
+  font-size: 14px
+  margin-bottom: 1px
+  color: $color-font-default
+
+.notifications__text
+  font-size: 12px
+  line-height: 15px
+  color: $color-font-grey-light
+
 
 
 // App states
