@@ -1,0 +1,29 @@
+<ion-view view-title="Sign In" hide-nav-bar="true">
+
+  <ion-nav-bar class="bar-stable">
+    <ion-nav-back-button></ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content>
+
+    <div class="signin">
+
+      <h2 class="signin__heading">
+        <a href="#/app/intro" class="signin__back ion-ios-arrow-left"></a>
+        Sign In
+      </h2>
+
+      <div class="signin__join">
+        Do not have an account?
+        <span class="signin__join-link" ng-click="signUp()">Sign Up</span>
+      </div>
+
+      <input class="signin__input" placeholder="Email" ng-model="username">
+      <input class="signin__input" type="password" placeholder="Password" ng-model="password">
+
+      <a class="signin__button" href="#/app/events" ng-disabled="!username || !password">Sign In</a>
+
+    </div>
+
+  </ion-content>
+</ion-view>

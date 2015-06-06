@@ -31,7 +31,7 @@ angular
       }
       {
         title: "Log Out"
-        url: "#"
+        url: "#/app/signin"
         icon: "ion-ios-upload-outline"
       }
       {
@@ -125,9 +125,16 @@ angular
       items: $filter('filter')($scope.notifications, {section: 'earlier'})
     }]
 
-    console.log('6666')
-
 
   .controller "AboutCtrl", ->
+    return
+
+  .controller "IntroCtrl", ->
+    return
+
+  .controller "SigninCtrl", ($scope, $window) ->
+    $scope.signUp = ->
+      $window.open "http://loveeatshare.com", "_system"
+
 
 

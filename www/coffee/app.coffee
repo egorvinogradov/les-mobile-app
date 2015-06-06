@@ -7,11 +7,26 @@ angular
   .config ($stateProvider, $urlRouterProvider) ->
 
     $stateProvider
+
       .state "app",
         url: "/app",
         abstract: true
         templateUrl: "templates/menu.html"
         controller: "AppCtrl"
+
+      .state "app.intro",
+        url: "/intro",
+        views:
+          menuContent:
+            templateUrl: "templates/intro.html"
+            controller: "IntroCtrl"
+
+      .state "app.signin",
+        url: "/signin",
+        views:
+          menuContent:
+            templateUrl: "templates/signin.html"
+            controller: "SigninCtrl"
         
       .state "app.search",
         url: "/search"
@@ -89,4 +104,4 @@ angular
             templateUrl: "templates/reviews.html"
             controller: "EventDetailReviewsCtrl"
 
-    $urlRouterProvider.otherwise "/app/events"
+    $urlRouterProvider.otherwise "/app/intro"
