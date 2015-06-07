@@ -31,7 +31,7 @@ angular
       }
       {
         title: "Log Out"
-        url: "#/app/signin"
+        url: "#/app/intro"
         icon: "ion-ios-upload-outline"
       }
       {
@@ -64,7 +64,7 @@ angular
 
 
 
-  .controller "EventDetailCtrl", ($scope, $ionicActionSheet, $stateParams, Events) ->
+  .controller "EventDetailCtrl", ($scope, $window, $ionicActionSheet, $stateParams, Events) ->
     $scope.getArray = (limit) -> [1..limit]
     $scope.event = Events.get($stateParams.id)
 
@@ -79,9 +79,9 @@ angular
         cancelText: "Cancel"
         buttonClicked: (index) ->
           if index is 0
-            window.open "https://www.facebook.com/sharer/sharer.php?u=#{$scope.event.url}"
+            $window.open "https://www.facebook.com/sharer/sharer.php?u=#{$scope.event.url}", "_system"
           else if index is 1
-            window.open "https://twitter.com/home?status=#{$scope.event.url}"
+            $window.open "https://twitter.com/home?status=#{$scope.event.url}", "_system"
 
 
 
@@ -134,7 +134,7 @@ angular
 
   .controller "SigninCtrl", ($scope, $window) ->
     $scope.signUp = ->
-      $window.open "http://loveeatshare.com", "_system"
+      $window.open "http://loveeatshare.com/users/sign_up", "_system"
 
 
 
